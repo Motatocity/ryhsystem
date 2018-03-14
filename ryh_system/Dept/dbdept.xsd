@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dbdept" targetNamespace="http://tempuri.org/dbdept.xsd" xmlns:mstns="http://tempuri.org/dbdept.xsd" xmlns="http://tempuri.org/dbdept.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dbdept" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dbdept" msprop:Generator_UserDSName="dbdept">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="riskdb" msprop:Generator_TableClassName="riskdbDataTable" msprop:Generator_TableVarName="tableriskdb" msprop:Generator_RowChangedName="riskdbRowChanged" msprop:Generator_TablePropName="riskdb" msprop:Generator_RowDeletingName="riskdbRowDeleting" msprop:Generator_RowChangingName="riskdbRowChanging" msprop:Generator_RowEvHandlerName="riskdbRowChangeEventHandler" msprop:Generator_RowDeletedName="riskdbRowDeleted" msprop:Generator_RowClassName="riskdbRow" msprop:Generator_UserTableName="riskdb" msprop:Generator_RowEvArgName="riskdbRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dateday" msprop:Generator_ColumnVarNameInTable="columndateday" msprop:Generator_ColumnPropNameInRow="dateday" msprop:Generator_ColumnPropNameInTable="datedayColumn" msprop:Generator_UserColumnName="dateday" type="xs:string" minOccurs="0" />
+              <xs:element name="riskpoint" msprop:Generator_ColumnVarNameInTable="columnriskpoint" msprop:Generator_ColumnPropNameInRow="riskpoint" msprop:Generator_ColumnPropNameInTable="riskpointColumn" msprop:Generator_UserColumnName="riskpoint" type="xs:string" minOccurs="0" />
+              <xs:element name="riskvolume" msprop:Generator_ColumnVarNameInTable="columnriskvolume" msprop:Generator_ColumnPropNameInRow="riskvolume" msprop:Generator_ColumnPropNameInTable="riskvolumeColumn" msprop:Generator_UserColumnName="riskvolume" type="xs:string" minOccurs="0" />
+              <xs:element name="riskpro" msprop:Generator_ColumnVarNameInTable="columnriskpro" msprop:Generator_ColumnPropNameInRow="riskpro" msprop:Generator_ColumnPropNameInTable="riskproColumn" msprop:Generator_UserColumnName="riskpro" type="xs:string" minOccurs="0" />
+              <xs:element name="riskstatcheck" msprop:Generator_ColumnVarNameInTable="columnriskstatcheck" msprop:Generator_ColumnPropNameInRow="riskstatcheck" msprop:Generator_ColumnPropNameInTable="riskstatcheckColumn" msprop:Generator_UserColumnName="riskstatcheck" type="xs:string" minOccurs="0" />
+              <xs:element name="idkey" msprop:Generator_ColumnVarNameInTable="columnidkey" msprop:Generator_ColumnPropNameInRow="idkey" msprop:Generator_ColumnPropNameInTable="idkeyColumn" msprop:Generator_UserColumnName="idkey" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="riskdbKey1">
+      <xs:selector xpath=".//mstns:riskdb" />
+      <xs:field xpath="mstns:idkey" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

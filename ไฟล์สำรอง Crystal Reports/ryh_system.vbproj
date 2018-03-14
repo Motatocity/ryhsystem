@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4B23220-2CBC-48FF-9DB6-AE5402D136CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ryh_system.My.MyApplication</StartupObject>
+    <RootNamespace>ryh_system</RootNamespace>
+    <AssemblyName>ryh_system</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ryh_system.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ryh_system.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AICompactMenu">
+      <HintPath>..\..\..\..\..\Desktop\DLL\AICompactMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="AIDropPanel">
+      <HintPath>..\..\..\..\..\Desktop\DLL\AIDropPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="AITabPanel">
+      <HintPath>..\..\..\..\..\Desktop\DLL\AITabPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=11.4.0.9, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\DLL\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=11.4.0.9, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\DLL\DevComponents.DotNetBar.Schedule.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=11.4.0.9, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\DLL\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.4.0.9, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\DLL\DevComponents.DotNetBar2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=11.4.0.9, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\DLL\DevComponents.Instrumentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.SuperGrid.Design, Version=11.4.0.9, Culture=neutral, PublicKeyToken=26d81176cfa2b486, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\DLL\DevComponents.SuperGrid.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX, Version=11.4.0.9, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\DLL\DevComponents.TreeGX.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="mysql.data">
+      <HintPath>..\..\..\..\..\Desktop\HelpDesk\HelpDesk\bin\Debug\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TabControlEX">
+      <HintPath>..\..\..\..\..\Desktop\DLL\TabControlEX.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alertCustom.Designer.vb">
+      <DependentUpon>alertCustom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="alertCustom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ambulance.Designer.vb">
+      <DependentUpon>ambulance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ambulance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chack_package.Designer.vb">
+      <DependentUpon>chack_package.vb</DependentUpon>
+    </Compile>
+    <Compile Include="chack_package.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="check_doctor_add.Designer.vb">
+      <DependentUpon>check_doctor_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="check_doctor_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company_oil.Designer.vb">
+      <DependentUpon>company_oil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company_oil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOilPackage.Designer.vb">
+      <DependentUpon>frmOilPackage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOilPackage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpackage1.Designer.vb">
+      <DependentUpon>frmpackage1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmpackage1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpackage1_1.Designer.vb">
+      <DependentUpon>frmpackage1_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmpackage1_1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_add_lab.Designer.vb">
+      <DependentUpon>frm_add_lab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_add_lab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.vb">
+      <DependentUpon>main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="oil_company.Designer.vb">
+      <DependentUpon>oil_company.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oil_company.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prnOilPackage.Designer.vb">
+      <DependentUpon>prnOilPackage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prnOilPackage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ambulance.resx">
+      <DependentUpon>ambulance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="check_doctor_add.resx">
+      <DependentUpon>check_doctor_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company_oil.resx">
+      <DependentUpon>company_oil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_add_lab.resx">
+      <DependentUpon>frm_add_lab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oil_company.resx">
+      <DependentUpon>oil_company.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Resources\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ppt-background-powerpoint-ppt-backgrounds-abstract-backgrounds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pramern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer and Fax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repair1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text-Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Accounts alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User No-Frame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User With Frame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w8_power.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Abstract Blue backgrounds 23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ambulance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\behavioral_icon_large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_delete32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_button-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control Panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control Panel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControlPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documents Library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form-Skin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenBack1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\headset..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home_test1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon three.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintel3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pink-Background-Wallpaper-640x400.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

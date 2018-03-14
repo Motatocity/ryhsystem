@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="computer" msprop:Generator_TableClassName="computerDataTable" msprop:Generator_TableVarName="tablecomputer" msprop:Generator_RowChangedName="computerRowChanged" msprop:Generator_TablePropName="computer" msprop:Generator_RowDeletingName="computerRowDeleting" msprop:Generator_RowChangingName="computerRowChanging" msprop:Generator_RowEvHandlerName="computerRowChangeEventHandler" msprop:Generator_RowDeletedName="computerRowDeleted" msprop:Generator_RowClassName="computerRow" msprop:Generator_UserTableName="computer" msprop:Generator_RowEvArgName="computerRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="c_cpu" msprop:Generator_ColumnVarNameInTable="columnc_cpu" msprop:Generator_ColumnPropNameInRow="c_cpu" msprop:Generator_ColumnPropNameInTable="c_cpuColumn" msprop:Generator_UserColumnName="c_cpu" type="xs:string" minOccurs="0" />
+              <xs:element name="section_name" msprop:Generator_ColumnVarNameInTable="columnsection_name" msprop:Generator_ColumnPropNameInRow="section_name" msprop:Generator_ColumnPropNameInTable="section_nameColumn" msprop:Generator_UserColumnName="section_name" type="xs:string" minOccurs="0" />
+              <xs:element name="floorid" msprop:Generator_ColumnVarNameInTable="columnfloorid" msprop:Generator_ColumnPropNameInRow="floorid" msprop:Generator_ColumnPropNameInTable="flooridColumn" msprop:Generator_UserColumnName="floorid" type="xs:short" minOccurs="0" />
+              <xs:element name="iddata_device" msprop:Generator_ColumnVarNameInTable="columniddata_device" msprop:Generator_ColumnPropNameInRow="iddata_device" msprop:Generator_ColumnPropNameInTable="iddata_deviceColumn" msprop:Generator_UserColumnName="iddata_device" type="xs:string" minOccurs="0" />
+              <xs:element name="location" msprop:Generator_ColumnVarNameInTable="columnlocation" msprop:Generator_ColumnPropNameInRow="location" msprop:Generator_ColumnPropNameInTable="locationColumn" msprop:Generator_UserColumnName="location" type="xs:string" minOccurs="0" />
+              <xs:element name="ipaddress" msprop:Generator_ColumnVarNameInTable="columnipaddress" msprop:Generator_ColumnPropNameInRow="ipaddress" msprop:Generator_ColumnPropNameInTable="ipaddressColumn" msprop:Generator_UserColumnName="ipaddress" type="xs:string" minOccurs="0" />
+              <xs:element name="cram" msprop:Generator_ColumnVarNameInTable="columncram" msprop:Generator_ColumnPropNameInRow="cram" msprop:Generator_ColumnPropNameInTable="cramColumn" msprop:Generator_UserColumnName="cram" type="xs:string" minOccurs="0" />
+              <xs:element name="chd" msprop:Generator_ColumnVarNameInTable="columnchd" msprop:Generator_ColumnPropNameInRow="chd" msprop:Generator_ColumnPropNameInTable="chdColumn" msprop:Generator_UserColumnName="chd" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Diag" msprop:Generator_TableClassName="DiagDataTable" msprop:Generator_TableVarName="tableDiag" msprop:Generator_RowChangedName="DiagRowChanged" msprop:Generator_TablePropName="Diag" msprop:Generator_RowDeletingName="DiagRowDeleting" msprop:Generator_RowChangingName="DiagRowChanging" msprop:Generator_RowEvHandlerName="DiagRowChangeEventHandler" msprop:Generator_RowDeletedName="DiagRowDeleted" msprop:Generator_RowClassName="DiagRow" msprop:Generator_UserTableName="Diag" msprop:Generator_RowEvArgName="DiagRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OMDSURGRP" msprop:Generator_ColumnVarNameInTable="columnOMDSURGRP" msprop:Generator_ColumnPropNameInRow="OMDSURGRP" msprop:Generator_ColumnPropNameInTable="OMDSURGRPColumn" msprop:Generator_UserColumnName="OMDSURGRP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OMDSURTYP" msprop:Generator_ColumnVarNameInTable="columnOMDSURTYP" msprop:Generator_ColumnPropNameInRow="OMDSURTYP" msprop:Generator_ColumnPropNameInTable="OMDSURTYPColumn" msprop:Generator_UserColumnName="OMDSURTYP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OMDSURNAM" msprop:Generator_ColumnVarNameInTable="columnOMDSURNAM" msprop:Generator_ColumnPropNameInRow="OMDSURNAM" msprop:Generator_ColumnPropNameInTable="OMDSURNAMColumn" msprop:Generator_UserColumnName="OMDSURNAM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OMSDOCDTE" msprop:Generator_ColumnVarNameInTable="columnOMSDOCDTE" msprop:Generator_ColumnPropNameInRow="OMSDOCDTE" msprop:Generator_ColumnPropNameInTable="OMSDOCDTEColumn" msprop:Generator_UserColumnName="OMSDOCDTE" type="xs:short" minOccurs="0" />
+              <xs:element name="OMSHN" msprop:Generator_ColumnVarNameInTable="columnOMSHN" msprop:Generator_ColumnPropNameInRow="OMSHN" msprop:Generator_ColumnPropNameInTable="OMSHNColumn" msprop:Generator_UserColumnName="OMSHN" type="xs:short" minOccurs="0" />
+              <xs:element name="RMSNAME" msprop:Generator_ColumnVarNameInTable="columnRMSNAME" msprop:Generator_ColumnPropNameInRow="RMSNAME" msprop:Generator_ColumnPropNameInTable="RMSNAMEColumn" msprop:Generator_UserColumnName="RMSNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RMSSURNAM" msprop:Generator_ColumnVarNameInTable="columnRMSSURNAM" msprop:Generator_ColumnPropNameInRow="RMSSURNAM" msprop:Generator_ColumnPropNameInTable="RMSSURNAMColumn" msprop:Generator_UserColumnName="RMSSURNAM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RMSSEX" msprop:Generator_ColumnVarNameInTable="columnRMSSEX" msprop:Generator_ColumnPropNameInRow="RMSSEX" msprop:Generator_ColumnPropNameInTable="RMSSEXColumn" msprop:Generator_UserColumnName="RMSSEX" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FILEFTP" msprop:Generator_TableClassName="FILEFTPDataTable" msprop:Generator_TableVarName="tableFILEFTP" msprop:Generator_TablePropName="FILEFTP" msprop:Generator_RowDeletingName="FILEFTPRowDeleting" msprop:Generator_RowChangingName="FILEFTPRowChanging" msprop:Generator_RowEvHandlerName="FILEFTPRowChangeEventHandler" msprop:Generator_RowDeletedName="FILEFTPRowDeleted" msprop:Generator_UserTableName="FILEFTP" msprop:Generator_RowChangedName="FILEFTPRowChanged" msprop:Generator_RowEvArgName="FILEFTPRowChangeEvent" msprop:Generator_RowClassName="FILEFTPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="filename1" msprop:Generator_ColumnVarNameInTable="columnfilename1" msprop:Generator_ColumnPropNameInRow="filename1" msprop:Generator_ColumnPropNameInTable="filename1Column" msprop:Generator_UserColumnName="filename1" type="xs:string" minOccurs="0" />
+              <xs:element name="pathfile" msprop:Generator_ColumnVarNameInTable="columnpathfile" msprop:Generator_ColumnPropNameInRow="pathfile" msprop:Generator_ColumnPropNameInTable="pathfileColumn" msprop:Generator_UserColumnName="pathfile" type="xs:string" minOccurs="0" />
+              <xs:element name="idfildetail" msprop:Generator_ColumnVarNameInTable="columnidfildetail" msprop:Generator_ColumnPropNameInRow="idfildetail" msprop:Generator_ColumnPropNameInTable="idfildetailColumn" msprop:Generator_UserColumnName="idfildetail" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="computerKey1">
+      <xs:selector xpath=".//mstns:computer" />
+      <xs:field xpath="mstns:floorid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
