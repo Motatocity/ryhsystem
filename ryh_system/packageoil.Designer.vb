@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class packageoil
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,13 @@ Partial Class packageoil
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(packageoil))
         Me.TabControlEX1 = New Dotnetrix.Controls.TabControlEX()
         Me.TabPageEX1 = New Dotnetrix.Controls.TabPageEX()
+        Me.eye_result = New System.Windows.Forms.TextBox()
+        Me.blood_pressure_result = New System.Windows.Forms.TextBox()
         Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
         Me.ComboBox25 = New System.Windows.Forms.ComboBox()
         Me.tab1_result_tooth = New System.Windows.Forms.RichTextBox()
@@ -482,8 +484,7 @@ Partial Class packageoil
         Me.dateconfirm = New DevComponents.DotNetBar.Controls.MaskedTextBoxAdv()
         Me.Label201 = New System.Windows.Forms.Label()
         Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.eye_result = New System.Windows.Forms.TextBox()
-        Me.blood_pressure_result = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TabControlEX1.SuspendLayout()
         Me.TabPageEX1.SuspendLayout()
         Me.GroupBox42.SuspendLayout()
@@ -609,6 +610,22 @@ Partial Class packageoil
         Me.TabPageEX1.Size = New System.Drawing.Size(1152, 516)
         Me.TabPageEX1.TabIndex = 0
         Me.TabPageEX1.Text = "การตรวจสุขภาพร่างกาย "
+        '
+        'eye_result
+        '
+        Me.eye_result.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.eye_result.Location = New System.Drawing.Point(15, 144)
+        Me.eye_result.Name = "eye_result"
+        Me.eye_result.Size = New System.Drawing.Size(552, 22)
+        Me.eye_result.TabIndex = 314
+        '
+        'blood_pressure_result
+        '
+        Me.blood_pressure_result.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.blood_pressure_result.Location = New System.Drawing.Point(380, 97)
+        Me.blood_pressure_result.Name = "blood_pressure_result"
+        Me.blood_pressure_result.Size = New System.Drawing.Size(193, 22)
+        Me.blood_pressure_result.TabIndex = 313
         '
         'RichTextBox5
         '
@@ -4978,8 +4995,8 @@ Partial Class packageoil
         Me.RadioButton3.Size = New System.Drawing.Size(631, 30)
         Me.RadioButton3.TabIndex = 2
         Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Temporary unfit for offshore employment in his / her position so please contact t" & _
-            "he doctor as soon as possible"
+        Me.RadioButton3.Text = "Temporary unfit for offshore employment in his / her position so please contact t" &
+    "he doctor as soon as possible"
         Me.RadioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
@@ -5004,8 +5021,8 @@ Partial Class packageoil
         Me.RadioButton1.Size = New System.Drawing.Size(842, 30)
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Fit for offshore employment in his / her position. This person is free from commu" & _
-            "nicable disease and is considered mecially fit for the work intended."
+        Me.RadioButton1.Text = "Fit for offshore employment in his / her position. This person is free from commu" &
+    "nicable disease and is considered mecially fit for the work intended."
         Me.RadioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
@@ -5413,7 +5430,7 @@ Partial Class packageoil
         '
         Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX1.Location = New System.Drawing.Point(1107, 65)
+        Me.ButtonX1.Location = New System.Drawing.Point(1058, 12)
         Me.ButtonX1.Name = "ButtonX1"
         Me.ButtonX1.Size = New System.Drawing.Size(61, 50)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014
@@ -5424,7 +5441,7 @@ Partial Class packageoil
         '
         Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX2.Location = New System.Drawing.Point(1047, 65)
+        Me.ButtonX2.Location = New System.Drawing.Point(984, 13)
         Me.ButtonX2.Name = "ButtonX2"
         Me.ButtonX2.Size = New System.Drawing.Size(54, 51)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014
@@ -5455,7 +5472,7 @@ Partial Class packageoil
         Me.dateconfirm.BackgroundStyle.Class = "TextBoxBorder"
         Me.dateconfirm.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.dateconfirm.ButtonClear.Visible = True
-        Me.dateconfirm.Location = New System.Drawing.Point(888, 20)
+        Me.dateconfirm.Location = New System.Drawing.Point(779, 20)
         Me.dateconfirm.Mask = "00/00/0000"
         Me.dateconfirm.Name = "dateconfirm"
         Me.dateconfirm.Size = New System.Drawing.Size(90, 19)
@@ -5469,7 +5486,7 @@ Partial Class packageoil
         Me.Label201.BackColor = System.Drawing.Color.Transparent
         Me.Label201.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label201.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label201.Location = New System.Drawing.Point(846, 17)
+        Me.Label201.Location = New System.Drawing.Point(737, 17)
         Me.Label201.Name = "Label201"
         Me.Label201.Size = New System.Drawing.Size(44, 26)
         Me.Label201.TabIndex = 342
@@ -5479,28 +5496,21 @@ Partial Class packageoil
         '
         Me.CheckBox8.AutoSize = True
         Me.CheckBox8.BackColor = System.Drawing.Color.Transparent
-        Me.CheckBox8.Location = New System.Drawing.Point(984, 20)
+        Me.CheckBox8.Location = New System.Drawing.Point(875, 20)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(72, 17)
         Me.CheckBox8.TabIndex = 344
         Me.CheckBox8.Text = "แสดงที่อยู่"
         Me.CheckBox8.UseVisualStyleBackColor = False
         '
-        'eye_result
+        'Button2
         '
-        Me.eye_result.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.eye_result.Location = New System.Drawing.Point(15, 144)
-        Me.eye_result.Name = "eye_result"
-        Me.eye_result.Size = New System.Drawing.Size(552, 22)
-        Me.eye_result.TabIndex = 314
-        '
-        'blood_pressure_result
-        '
-        Me.blood_pressure_result.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.blood_pressure_result.Location = New System.Drawing.Point(380, 97)
-        Me.blood_pressure_result.Name = "blood_pressure_result"
-        Me.blood_pressure_result.Size = New System.Drawing.Size(193, 22)
-        Me.blood_pressure_result.TabIndex = 313
+        Me.Button2.BackgroundImage = Global.ryh_system.My.Resources.Resources.Printer_and_Fax
+        Me.Button2.Location = New System.Drawing.Point(1058, 64)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(61, 52)
+        Me.Button2.TabIndex = 345
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'packageoil
         '
@@ -5509,6 +5519,7 @@ Partial Class packageoil
         Me.BackgroundImage = Global.ryh_system.My.Resources.Resources.main
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1168, 732)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.CheckBox8)
         Me.Controls.Add(Me.dateconfirm)
         Me.Controls.Add(Me.Label201)
@@ -6104,4 +6115,5 @@ Partial Class packageoil
     Friend WithEvents RichTextBox6 As System.Windows.Forms.RichTextBox
     Friend WithEvents eye_result As System.Windows.Forms.TextBox
     Friend WithEvents blood_pressure_result As System.Windows.Forms.TextBox
+    Friend WithEvents Button2 As Button
 End Class

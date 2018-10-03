@@ -64,7 +64,7 @@ Public Class packageoil
         Dim mySqlReader As MySqlDataReader
 
         mysql_ryh = New MySqlConnection
-        mysql_ryh.ConnectionString = "server=ryh1;user id=june;password=software;database=rajyindee_db;Character Set=utf8;"
+        mysql_ryh.ConnectionString = "server=192.0.0.200;user id=june;password=software;database=rajyindee_db;Character Set=utf8;"
 
         Try
             mysql_ryh.Open()
@@ -1058,5 +1058,235 @@ Public Class packageoil
 
         Dim FrmReportEnv As FrmReportEnv = New FrmReportEnv(name_lastname, company_name, "1")
         FrmReportEnv.Show()
+    End Sub
+
+    Private Sub ButtonX3_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        update_data()
+
+        Dim commandText2 As String
+        Dim glass As String
+        If eye_in.Checked = True Then
+            glass = "1"
+        ElseIf eye_out.Checked = True Then
+            glass = "0"
+        ElseIf eye_not.Checked = True Then
+            glass = "3"
+        End If
+
+        Dim mySqlCommand As New MySqlCommand
+        If mysql.State = ConnectionState.Closed Then
+            mysql.Open()
+        End If
+
+        checkaddress = CheckBox8.Checked
+        address = txt_address.Text
+        Dim phy_eye As String = " "
+        If r_eye1.Checked = True Then
+            phy_eye = "0"
+        ElseIf r_eye2.Checked = True Then
+            phy_eye = "1"
+        ElseIf r_eye3.Checked = True Then
+            phy_eye = "2"
+        End If
+
+        If RadioButton1.Checked = True Then
+            fit_check = "1"
+        ElseIf RadioButton2.Checked = True Then
+            fit_check = "2"
+        ElseIf RadioButton3.Checked = True Then
+            fit_check = "3"
+        End If
+
+        Dim phy_nec As String = " "
+        If neck1.Checked = True Then
+            phy_nec = "0"
+        ElseIf neck2.Checked = True Then
+            phy_nec = "1"
+        ElseIf neck3.Checked = True Then
+            phy_nec = "2"
+        End If
+
+        Dim phy_hea As String = " "
+        If heart1.Checked = True Then
+            phy_hea = "0"
+        ElseIf heart2.Checked = True Then
+            phy_hea = "1"
+        ElseIf heart3.Checked = True Then
+            phy_hea = "2"
+        End If
+
+        Dim phy_vas As String = " "
+        If vas1.Checked = True Then
+            phy_vas = "0"
+        ElseIf vas2.Checked = True Then
+            phy_vas = "1"
+        ElseIf vas3.Checked = True Then
+            phy_vas = "2"
+        End If
+
+        Dim phy_lun_che As String = " "
+
+        If chest1.Checked = True Then
+            phy_lun_che = "0"
+        ElseIf chest2.Checked = True Then
+            phy_lun_che = "1"
+        ElseIf chest3.Checked = True Then
+            phy_lun_che = "2"
+        End If
+
+        Dim phy_adb As String = " "
+
+        If ab1.Checked = True Then
+            phy_adb = "0"
+        ElseIf ab2.Checked = True Then
+            phy_adb = "1"
+        ElseIf ab3.Checked = True Then
+            phy_adb = "2"
+        End If
+
+        Dim phy_lym As String = " "
+
+        If lymp1.Checked = True Then
+            phy_lym = "0"
+        ElseIf lymp2.Checked = True Then
+            phy_lym = "1"
+        ElseIf lymp3.Checked = True Then
+            phy_lym = "2"
+        End If
+
+        Dim phy_gus As String = " "
+
+        If gu1.Checked = True Then
+            phy_gus = "0"
+        ElseIf gu2.Checked = True Then
+            phy_gus = "1"
+        ElseIf gu3.Checked = True Then
+            phy_gus = "2"
+        End If
+
+        Dim phy_ext As String = " "
+
+        If ex1.Checked = True Then
+            phy_ext = "0"
+        ElseIf ex2.Checked = True Then
+            phy_ext = "1"
+        ElseIf ex3.Checked = True Then
+            phy_ext = "2"
+        End If
+
+        Dim phy_spi As String = " "
+
+        If spine1.Checked = True Then
+            phy_spi = "0"
+        ElseIf spine2.Checked = True Then
+            phy_spi = "1"
+        ElseIf spine3.Checked = True Then
+            phy_spi = "2"
+        End If
+
+        Dim phy_ski As String = " "
+
+        If skin1.Checked = True Then
+            phy_ski = "0"
+        ElseIf skin2.Checked = True Then
+            phy_ski = "1"
+        ElseIf skin3.Checked = True Then
+            phy_ski = "2"
+        End If
+
+        Dim phy_aud As String = " "
+
+        If audio1.Checked = True Then
+            phy_aud = "0"
+        ElseIf audio2.Checked = True Then
+            phy_aud = "1"
+        ElseIf audio3.Checked = True Then
+            phy_aud = "2"
+        End If
+
+        Dim phy_lun_tes As String = " "
+
+        If lung1.Checked = True Then
+            phy_lun_tes = "0"
+        ElseIf lung2.Checked = True Then
+            phy_lun_tes = "1"
+        ElseIf lung3.Checked = True Then
+            phy_lun_tes = "2"
+        End If
+
+        Dim phy_ekg_oil As String = " "
+
+        If ekg1.Checked = True Then
+            phy_ekg_oil = "0"
+        ElseIf ekg2.Checked = True Then
+            phy_ekg_oil = "1"
+        ElseIf ekg3.Checked = True Then
+            phy_ekg_oil = "2"
+        End If
+
+        Dim eye_vision As String
+
+        If eye_in.Checked = True Then
+            eye_vision = "1"
+        Else
+            eye_vision = "0"
+        End If
+
+
+
+
+        If CheckBox2.Checked = True Then
+            spec = "1"
+        Else
+            spec = "0"
+        End If
+
+        If CheckBox3.Checked = True Then
+            fitair = "1"
+        Else
+            fitair = "0"
+        End If
+
+        If CheckBox4.Checked = True Then
+            fitbreath = "1"
+        Else
+            fitbreath = "0"
+        End If
+
+        If CheckBox5.Checked = True Then
+            fitcrance = "1"
+        Else
+            fitcrance = "0"
+        End If
+
+        If CheckBox6.Checked = True Then
+            fitemergency = "1"
+        Else
+            fitemergency = "0"
+        End If
+
+        If CheckBox7.Checked = True Then
+            fitfood = "1"
+        Else
+            fitfood = "0"
+        End If
+
+
+
+        commandText2 = "UPDATE healthycare_ryh SET p_company = '" & txtcompany.Text & "' , p_id = '" & txtsearch.Text & "' , p_name = '" & txt_name.Text & "' , p_height = '" & tab1_txt_height.Text & "'  , p_weight = '" & tab1_tab_weight.Text & "', p_sex = '" & txt_sex.Text & "' , p_age = '" & txt_age.Text & "' , p_tell = '" & txt_tell.Text & "', p_add = '" & txt_address.Text & "', p_aid = '" & txt_aid.Text & "' , p_date = '" & txt_date.Text & "', p_pulse = '" & tab1_txt_pulserate.Text & "', p_bmi = '" & tab1_txt_bmi.Text & "',p_blood_pre = '" & tab1_txt_bloodp.Text & "',p_typevision = '" & eye_vision & "', p_eyeright = '" & tab1_txt_eyer.Text & "', p_eyeleft = '" & tab1_txt_eyel.Text & "',p_colorbindness = '" & Blind_Color.Text & "',phy_eye = '" & phy_eye & "' , phy_nec = '" & phy_nec & "' , phy_lun_che = '" & phy_lun_che & "', phy_hea = '" & phy_hea & "',phy_vas ='" & phy_vas & "' ,phy_abd ='" & phy_adb & "',phy_lym ='" & phy_lym & "',phy_gus = '" & phy_gus & "',phy_ext ='" & phy_ext & "', phy_spi ='" & phy_spi & "',  phy_ski = '" & phy_ski & "', phy_aud ='" & phy_aud & "',phy_lun_tes = '" & phy_lun_tes & "',phy_ekg_oil ='" & phy_ekg_oil & "',che_fbs = '" & tab4_txt_fbs.Text & "', che_bun ='" & tab5_txt_bun.Text & "',che_cre = '" & tab5_txt_creatinine.Text & "' ,che_cho = '" & tab5_txt_cholesterol.Text & "',che_tri = '" & tab5_txt_trigyceride.Text & "',che_sgo ='" & tab6_txt_sgot.Text & "' ,  che_sgp = '" & tab6_txt_sgpt.Text & "', che_alk = '" & tab6_txt_alkaline.Text & "' , che_uri = '" & tab5_txt_uricacid.Text & "',che_hdl = '" & tab5_txt_hdl.Text & "', che_ldl = '" & tab6_txt_ldl.Text & " ' ,che_afp = '" & tab6_txt_afp.Text & "',che_cea = '" & TextBox5.Text & "',che_mer = '" & TextBox6.Text & "' ,blo_gro = '" & tab2_txt_groupblood.Text & "', blo_rhe = '" & tab2_txt_rh.Text & "',blo_pla = '" & tab2_txt_plate.Text & "', tab6_result_psp = '" & tab6_result_psp.Text & "' , blo_redcell = '" & tab2_txt_redcell.Text & "' , blo_cbc_wbc = '" & tab2_txt_wbc.Text & "' ,blo_cbc_hct ='" & tab2_txt_hct.Text & "',blo_cbc_hb = '" & tab2_txt_hb.Text & "',blo_cbc_l ='" & tab2_txt_lymphocytes.Text & "',blo_cbc_m = '" & tab2_txt_monocytes.Text & "',blo_cbc_e = '" & tab2_txt_eosinophils.Text & "',blo_cbc_b = '" & tab2_txt_bashophils.Text & "',blo_cbc_n = '" & tab2_txt_neutrophils.Text & "',blo_cbc_a = '" & tab2_txt_atypical.Text & "',uri_col = '" & tab3_txt_color.Text & "',uri_spg='" & tab3_txt_spgr.Text & "', uri_alb = '" & tab3_txt_albumin.Text & "', uri_blo = '" & tab3_txt_blood.Text & "',uri_epi = '" & tab3_txt_epi.Text & "', uri_app = '" & tab3_txt_appearance.Text & "', uri_ph = '" & tab3_txt_ph.Text & "', uri_glu = '" & tab3_txt_glucose.Text & "',uri_rbe='" & tab3_txt_rbc.Text & "',uri_wbc = '" & tab3_txt_wbc.Text & "', uri_other = '" & tab3_txt_other.Text & "',sto_wbc = '" & tab6_stool_wbc.Text & "',sto_rbc = '" & tab6_stool_rbc.Text & "',sto_ova = '" & tab6_stool_parasites.Text & "',sto_occ='" & tab6_stool_blood.Text & "',xray = '" & tab4_result_x_ray.Text & "' ,result_phy ='" & tab4_result_phy.Text & "',result_psp='" & tab6_result_psp.Text & "',hiv = '" & tab3_txt_hiv.Text & "',vdrl  ='" & tab3_txt_vdrl.Text & "',vir_sag = '" & txt_hbsag.Text & "',vir_sab='" & txt_hbsab.Text & "' ,vir_cab='" & txt_hbcab.Text & "',vir_igg='" & txt_anti_igg.Text & "',vir_igm ='" & txt_hav_igm.Text & "',package_type ='Oil',result_eye='" & RichTextBox5.Text & "',eye_1='" & ComboBox25.Text & "',blind ='" & Blind_Color.Text & "',result_blind ='" & tab1_result_blindness.Text & "',check_eye = '" & ComboBox1.Text & "' ,result_check_eye ='" & tab1_result_eye.Text & "',teeth='" & ComboBox24.Text & "',result_teeth='" & tab1_result_tooth.Text & "',result_all ='" & MySqlHelper.EscapeString(RichTextBox1.Text) & "',doctor_name = '" & txt_doctor_name.Text & "',license = '" & txt_license.Text & "',result_fit='" & txt_other_fit.Text & "',amphetamine = '" & tab3_txt_amphetamine.Text & "',stool_culture = '" & ComboBox26.Text & "',tab2_result='" & tab2_result_txt.Text & "',tab4_result_fbs ='" & tab4_result_fbs.Text & "',tab4_result_vdrl='" & tab4_result_vdrl.Text & "',tab4_result_hiv='" & RichTextBox3.Text & "',tab5_result_bun ='" & tab5_result_bun.Text & "',tab5_result_cholesterol ='" & tab5_result_cholesterol.Text & "',tab5_result_creatinine = '" & tab5_result_creatinine.Text & "',tab5_result_trigyceride='" & tab5_result_trigyceride.Text & "',tab5_result_uric_acid ='" & tab5_result_trigyceride.Text & "',tab5_result_hdl ='" & tab5_result_hdl.Text & "',tab6_result_ldl ='" & tab6_result_ldl.Text & "',tab6_result_alkaline='" & tab6_result_alkaline.Text & "' ,tab6_result_sgot='" & tab6_result_sgot.Text & "',tab6_result_afp='" & tab6_result_afp.Text & "',tab_result_spgt ='" & tab6_result_spgt.Text & "',tab6_result_psp='" & tab6_result_psp.Text & "',tab6_result_virus_b ='" & tab6_result_virus_b.Text & "',tab6_result_stool ='" & tab6_result_stool.Text & "',tab6_result_cea ='" & RichTextBox2.Text & "',tab6_result_mercury ='" & RichTextBox4.Text & "',p_lastname ='" & txt_lastname.Text & "',che_pap='" & ComboBox19.Text & "',glass ='" & glass & "' ,fit_oil = '" & fit_check & "', fit_spec= '" & spec & "' , fit_air ='" & fitair & "' , fit_breath= '" & fitbreath & "', fit_crane = '" & fitcrance & "', fit_emergency = '" & fitemergency & "' , fit_food ='" & fitfood & "' WHERE idhealthycare = " & health & "; "
+        mySqlCommand.CommandText = commandText2
+        mySqlCommand.CommandType = CommandType.Text
+        mySqlCommand.Connection = mysql
+
+        mySqlCommand.ExecuteNonQuery()
+        mysql.Close()
+
+        Dim NextForm As frmOilAfterform = New frmOilAfterform(mysqlpass, ipconnect, usernamedb, dbname, health, True)
+        '  Dim NextForm As main_user = New main_user()
+        NextForm.Show()
     End Sub
 End Class
