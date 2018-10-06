@@ -41,6 +41,8 @@ Public Class oil_company
         mysql = New MySqlConnection
         ' mysql.ConnectionString = "server=" + ipconnect + ";user id=" + usernamedb + ";password=" + mysqlpass + ";database=" + dbname + ";Character Set =utf8;"
         ipconnect = "ryh1"
+        ipconnect = "192.0.0.200"
+
         mysqlpass = "software"
         usernamedb = "june"
         dbname = "rajyindee_db"

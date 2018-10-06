@@ -379,6 +379,44 @@ Public Class packageoil
                     ekg3.Checked = True
                 End If
 
+
+                If IsDBNull(mySqlReader("phy_ust")) Then
+                    ust3.Checked = True
+                Else
+                    If mySqlReader("phy_ust") = "0" Then
+                        ust1.Checked = True
+                    ElseIf mySqlReader("phy_ust") = "1" Then
+                        ust2.Checked = True
+                    ElseIf mySqlReader("phy_ust") = "2" Then
+                        ust3.Checked = True
+                    End If
+
+                End If
+
+
+
+                If IsDBNull(mySqlReader("phy_est")) Then
+                    est3.Checked = True
+                Else
+                    If mySqlReader("phy_est") = "0" Then
+                        est1.Checked = True
+                    ElseIf mySqlReader("phy_est") = "1" Then
+                        est2.Checked = True
+                    ElseIf mySqlReader("phy_est") = "2" Then
+                        est3.Checked = True
+                    End If
+
+                End If
+
+
+                If IsDBNull(mySqlReader("ex_date")) Then
+
+
+                Else
+                    txtCertExp.Text = mySqlReader("ex_date")
+                End If
+
+
                 If mySqlReader("glass") = "1" Then
                     eye_in.Checked = True
                 ElseIf mySqlReader("glass") = "0" Then
@@ -773,10 +811,34 @@ Public Class packageoil
         Else
             fitfood = "0"
         End If
+        Dim ust As String
+        If ust1.Checked = True Then
+            ust = "0"
+
+        ElseIf ust2.Checked = True Then
+            ust = "1"
+
+        ElseIf ust3.Checked = True Then
+
+            ust = "2"
+
+        End If
+
+
+        Dim phy_est As String = ""
+        If est1.Checked = True Then
+            phy_est = "0"
+        ElseIf est2.Checked = True Then
+            phy_est = "1"
+
+        ElseIf est3.Checked = True Then
+            phy_est = "2"
+
+        End If
 
 
 
-        commandText2 = "UPDATE healthycare_ryh SET p_company = '" & txtcompany.Text & "' , p_id = '" & txtsearch.Text & "' , p_name = '" & txt_name.Text & "' , p_height = '" & tab1_txt_height.Text & "'  , p_weight = '" & tab1_tab_weight.Text & "', p_sex = '" & txt_sex.Text & "' , p_age = '" & txt_age.Text & "' , p_tell = '" & txt_tell.Text & "', p_add = '" & txt_address.Text & "', p_aid = '" & txt_aid.Text & "' , p_date = '" & txt_date.Text & "', p_pulse = '" & tab1_txt_pulserate.Text & "', p_bmi = '" & tab1_txt_bmi.Text & "',p_blood_pre = '" & tab1_txt_bloodp.Text & "',p_typevision = '" & eye_vision & "', p_eyeright = '" & tab1_txt_eyer.Text & "', p_eyeleft = '" & tab1_txt_eyel.Text & "',p_colorbindness = '" & Blind_Color.Text & "',phy_eye = '" & phy_eye & "' , phy_nec = '" & phy_nec & "' , phy_lun_che = '" & phy_lun_che & "', phy_hea = '" & phy_hea & "',phy_vas ='" & phy_vas & "' ,phy_abd ='" & phy_adb & "',phy_lym ='" & phy_lym & "',phy_gus = '" & phy_gus & "',phy_ext ='" & phy_ext & "', phy_spi ='" & phy_spi & "',  phy_ski = '" & phy_ski & "', phy_aud ='" & phy_aud & "',phy_lun_tes = '" & phy_lun_tes & "',phy_ekg_oil ='" & phy_ekg_oil & "',che_fbs = '" & tab4_txt_fbs.Text & "', che_bun ='" & tab5_txt_bun.Text & "',che_cre = '" & tab5_txt_creatinine.Text & "' ,che_cho = '" & tab5_txt_cholesterol.Text & "',che_tri = '" & tab5_txt_trigyceride.Text & "',che_sgo ='" & tab6_txt_sgot.Text & "' ,  che_sgp = '" & tab6_txt_sgpt.Text & "', che_alk = '" & tab6_txt_alkaline.Text & "' , che_uri = '" & tab5_txt_uricacid.Text & "',che_hdl = '" & tab5_txt_hdl.Text & "', che_ldl = '" & tab6_txt_ldl.Text & " ' ,che_afp = '" & tab6_txt_afp.Text & "',che_cea = '" & TextBox5.Text & "',che_mer = '" & TextBox6.Text & "' ,blo_gro = '" & tab2_txt_groupblood.Text & "', blo_rhe = '" & tab2_txt_rh.Text & "',blo_pla = '" & tab2_txt_plate.Text & "', tab6_result_psp = '" & tab6_result_psp.Text & "' , blo_redcell = '" & tab2_txt_redcell.Text & "' , blo_cbc_wbc = '" & tab2_txt_wbc.Text & "' ,blo_cbc_hct ='" & tab2_txt_hct.Text & "',blo_cbc_hb = '" & tab2_txt_hb.Text & "',blo_cbc_l ='" & tab2_txt_lymphocytes.Text & "',blo_cbc_m = '" & tab2_txt_monocytes.Text & "',blo_cbc_e = '" & tab2_txt_eosinophils.Text & "',blo_cbc_b = '" & tab2_txt_bashophils.Text & "',blo_cbc_n = '" & tab2_txt_neutrophils.Text & "',blo_cbc_a = '" & tab2_txt_atypical.Text & "',uri_col = '" & tab3_txt_color.Text & "',uri_spg='" & tab3_txt_spgr.Text & "', uri_alb = '" & tab3_txt_albumin.Text & "', uri_blo = '" & tab3_txt_blood.Text & "',uri_epi = '" & tab3_txt_epi.Text & "', uri_app = '" & tab3_txt_appearance.Text & "', uri_ph = '" & tab3_txt_ph.Text & "', uri_glu = '" & tab3_txt_glucose.Text & "',uri_rbe='" & tab3_txt_rbc.Text & "',uri_wbc = '" & tab3_txt_wbc.Text & "', uri_other = '" & tab3_txt_other.Text & "',sto_wbc = '" & tab6_stool_wbc.Text & "',sto_rbc = '" & tab6_stool_rbc.Text & "',sto_ova = '" & tab6_stool_parasites.Text & "',sto_occ='" & tab6_stool_blood.Text & "',xray = '" & tab4_result_x_ray.Text & "' ,result_phy ='" & tab4_result_phy.Text & "',result_psp='" & tab6_result_psp.Text & "',hiv = '" & tab3_txt_hiv.Text & "',vdrl  ='" & tab3_txt_vdrl.Text & "',vir_sag = '" & txt_hbsag.Text & "',vir_sab='" & txt_hbsab.Text & "' ,vir_cab='" & txt_hbcab.Text & "',vir_igg='" & txt_anti_igg.Text & "',vir_igm ='" & txt_hav_igm.Text & "',package_type ='Oil',result_eye='" & RichTextBox5.Text & "',eye_1='" & ComboBox25.Text & "',blind ='" & Blind_Color.Text & "',result_blind ='" & tab1_result_blindness.Text & "',check_eye = '" & ComboBox1.Text & "' ,result_check_eye ='" & tab1_result_eye.Text & "',teeth='" & ComboBox24.Text & "',result_teeth='" & tab1_result_tooth.Text & "',result_all ='" & MySqlHelper.EscapeString(RichTextBox1.Text) & "',doctor_name = '" & txt_doctor_name.Text & "',license = '" & txt_license.Text & "',result_fit='" & txt_other_fit.Text & "',amphetamine = '" & tab3_txt_amphetamine.Text & "',stool_culture = '" & ComboBox26.Text & "',tab2_result='" & tab2_result_txt.Text & "',tab4_result_fbs ='" & tab4_result_fbs.Text & "',tab4_result_vdrl='" & tab4_result_vdrl.Text & "',tab4_result_hiv='" & RichTextBox3.Text & "',tab5_result_bun ='" & tab5_result_bun.Text & "',tab5_result_cholesterol ='" & tab5_result_cholesterol.Text & "',tab5_result_creatinine = '" & tab5_result_creatinine.Text & "',tab5_result_trigyceride='" & tab5_result_trigyceride.Text & "',tab5_result_uric_acid ='" & tab5_result_trigyceride.Text & "',tab5_result_hdl ='" & tab5_result_hdl.Text & "',tab6_result_ldl ='" & tab6_result_ldl.Text & "',tab6_result_alkaline='" & tab6_result_alkaline.Text & "' ,tab6_result_sgot='" & tab6_result_sgot.Text & "',tab6_result_afp='" & tab6_result_afp.Text & "',tab_result_spgt ='" & tab6_result_spgt.Text & "',tab6_result_psp='" & tab6_result_psp.Text & "',tab6_result_virus_b ='" & tab6_result_virus_b.Text & "',tab6_result_stool ='" & tab6_result_stool.Text & "',tab6_result_cea ='" & RichTextBox2.Text & "',tab6_result_mercury ='" & RichTextBox4.Text & "',p_lastname ='" & txt_lastname.Text & "',che_pap='" & ComboBox19.Text & "',glass ='" & glass & "' ,fit_oil = '" & fit_check & "', fit_spec= '" & spec & "' , fit_air ='" & fitair & "' , fit_breath= '" & fitbreath & "', fit_crane = '" & fitcrance & "', fit_emergency = '" & fitemergency & "' , fit_food ='" & fitfood & "' WHERE idhealthycare = " & health & "; "
+        commandText2 = "UPDATE healthycare_ryh SET p_company = '" & txtcompany.Text & "' , p_id = '" & txtsearch.Text & "' , p_name = '" & txt_name.Text & "' , p_height = '" & tab1_txt_height.Text & "'  , p_weight = '" & tab1_tab_weight.Text & "', p_sex = '" & txt_sex.Text & "' , p_age = '" & txt_age.Text & "' , p_tell = '" & txt_tell.Text & "', p_add = '" & txt_address.Text & "', p_aid = '" & txt_aid.Text & "' , p_date = '" & txt_date.Text & "', p_pulse = '" & tab1_txt_pulserate.Text & "', p_bmi = '" & tab1_txt_bmi.Text & "',p_blood_pre = '" & tab1_txt_bloodp.Text & "',p_typevision = '" & eye_vision & "', p_eyeright = '" & tab1_txt_eyer.Text & "', p_eyeleft = '" & tab1_txt_eyel.Text & "',p_colorbindness = '" & Blind_Color.Text & "',phy_eye = '" & phy_eye & "' , phy_nec = '" & phy_nec & "' , phy_lun_che = '" & phy_lun_che & "', phy_hea = '" & phy_hea & "',phy_vas ='" & phy_vas & "' ,phy_abd ='" & phy_adb & "',phy_lym ='" & phy_lym & "',phy_gus = '" & phy_gus & "',phy_ext ='" & phy_ext & "', phy_spi ='" & phy_spi & "',  phy_ski = '" & phy_ski & "', phy_aud ='" & phy_aud & "',phy_lun_tes = '" & phy_lun_tes & "',phy_ekg_oil ='" & phy_ekg_oil & "',che_fbs = '" & tab4_txt_fbs.Text & "', che_bun ='" & tab5_txt_bun.Text & "',che_cre = '" & tab5_txt_creatinine.Text & "' ,che_cho = '" & tab5_txt_cholesterol.Text & "',che_tri = '" & tab5_txt_trigyceride.Text & "',che_sgo ='" & tab6_txt_sgot.Text & "' ,  che_sgp = '" & tab6_txt_sgpt.Text & "', che_alk = '" & tab6_txt_alkaline.Text & "' , che_uri = '" & tab5_txt_uricacid.Text & "',che_hdl = '" & tab5_txt_hdl.Text & "', che_ldl = '" & tab6_txt_ldl.Text & " ' ,che_afp = '" & tab6_txt_afp.Text & "',che_cea = '" & TextBox5.Text & "',che_mer = '" & TextBox6.Text & "' ,blo_gro = '" & tab2_txt_groupblood.Text & "', blo_rhe = '" & tab2_txt_rh.Text & "',blo_pla = '" & tab2_txt_plate.Text & "', tab6_result_psp = '" & tab6_result_psp.Text & "' , blo_redcell = '" & tab2_txt_redcell.Text & "' , blo_cbc_wbc = '" & tab2_txt_wbc.Text & "' ,blo_cbc_hct ='" & tab2_txt_hct.Text & "',blo_cbc_hb = '" & tab2_txt_hb.Text & "',blo_cbc_l ='" & tab2_txt_lymphocytes.Text & "',blo_cbc_m = '" & tab2_txt_monocytes.Text & "',blo_cbc_e = '" & tab2_txt_eosinophils.Text & "',blo_cbc_b = '" & tab2_txt_bashophils.Text & "',blo_cbc_n = '" & tab2_txt_neutrophils.Text & "',blo_cbc_a = '" & tab2_txt_atypical.Text & "',uri_col = '" & tab3_txt_color.Text & "',uri_spg='" & tab3_txt_spgr.Text & "', uri_alb = '" & tab3_txt_albumin.Text & "', uri_blo = '" & tab3_txt_blood.Text & "',uri_epi = '" & tab3_txt_epi.Text & "', uri_app = '" & tab3_txt_appearance.Text & "', uri_ph = '" & tab3_txt_ph.Text & "', uri_glu = '" & tab3_txt_glucose.Text & "',uri_rbe='" & tab3_txt_rbc.Text & "',uri_wbc = '" & tab3_txt_wbc.Text & "', uri_other = '" & tab3_txt_other.Text & "',sto_wbc = '" & tab6_stool_wbc.Text & "',sto_rbc = '" & tab6_stool_rbc.Text & "',sto_ova = '" & tab6_stool_parasites.Text & "',sto_occ='" & tab6_stool_blood.Text & "',xray = '" & tab4_result_x_ray.Text & "' ,result_phy ='" & tab4_result_phy.Text & "',result_psp='" & tab6_result_psp.Text & "',hiv = '" & tab3_txt_hiv.Text & "',vdrl  ='" & tab3_txt_vdrl.Text & "',vir_sag = '" & txt_hbsag.Text & "',vir_sab='" & txt_hbsab.Text & "' ,vir_cab='" & txt_hbcab.Text & "',vir_igg='" & txt_anti_igg.Text & "',vir_igm ='" & txt_hav_igm.Text & "',package_type ='Oil',result_eye='" & RichTextBox5.Text & "',eye_1='" & ComboBox25.Text & "',blind ='" & Blind_Color.Text & "',result_blind ='" & tab1_result_blindness.Text & "',check_eye = '" & ComboBox1.Text & "' ,result_check_eye ='" & tab1_result_eye.Text & "',teeth='" & ComboBox24.Text & "',result_teeth='" & tab1_result_tooth.Text & "',result_all ='" & MySqlHelper.EscapeString(RichTextBox1.Text) & "',doctor_name = '" & txt_doctor_name.Text & "',license = '" & txt_license.Text & "',result_fit='" & txt_other_fit.Text & "',amphetamine = '" & tab3_txt_amphetamine.Text & "',stool_culture = '" & ComboBox26.Text & "',tab2_result='" & tab2_result_txt.Text & "',tab4_result_fbs ='" & tab4_result_fbs.Text & "',tab4_result_vdrl='" & tab4_result_vdrl.Text & "',tab4_result_hiv='" & RichTextBox3.Text & "',tab5_result_bun ='" & tab5_result_bun.Text & "',tab5_result_cholesterol ='" & tab5_result_cholesterol.Text & "',tab5_result_creatinine = '" & tab5_result_creatinine.Text & "',tab5_result_trigyceride='" & tab5_result_trigyceride.Text & "',tab5_result_uric_acid ='" & tab5_result_trigyceride.Text & "',tab5_result_hdl ='" & tab5_result_hdl.Text & "',tab6_result_ldl ='" & tab6_result_ldl.Text & "',tab6_result_alkaline='" & tab6_result_alkaline.Text & "' ,tab6_result_sgot='" & tab6_result_sgot.Text & "',tab6_result_afp='" & tab6_result_afp.Text & "',tab_result_spgt ='" & tab6_result_spgt.Text & "',tab6_result_psp='" & tab6_result_psp.Text & "',tab6_result_virus_b ='" & tab6_result_virus_b.Text & "',tab6_result_stool ='" & tab6_result_stool.Text & "',tab6_result_cea ='" & RichTextBox2.Text & "',tab6_result_mercury ='" & RichTextBox4.Text & "',p_lastname ='" & txt_lastname.Text & "',che_pap='" & ComboBox19.Text & "',glass ='" & glass & "' ,fit_oil = '" & fit_check & "', fit_spec= '" & spec & "' , fit_air ='" & fitair & "' , fit_breath= '" & fitbreath & "', fit_crane = '" & fitcrance & "', fit_emergency = '" & fitemergency & "' , fit_food ='" & fitfood & "',phy_est = '" & phy_est & "' , phy_ust = '" & ust & "' WHERE idhealthycare = " & health & "; "
         mySqlCommand.CommandText = commandText2
         mySqlCommand.CommandType = CommandType.Text
         mySqlCommand.Connection = mysql
@@ -997,6 +1059,37 @@ Public Class packageoil
             phy_ekg_oil = "2"
         End If
 
+        Dim ust As String
+        If ust1.Checked = True Then
+            ust = "0"
+
+        ElseIf ust2.Checked = True Then
+            ust = "1"
+
+        ElseIf ust3.Checked = True Then
+
+            ust = "2"
+
+        End If
+
+
+        Dim est As String
+        If est1.Checked = True Then
+            est = "0"
+
+        ElseIf est2.Checked = True Then
+            est = "1"
+
+        ElseIf est3.Checked = True Then
+
+            est = "2"
+
+
+        End If
+
+
+
+
         Dim eye_vision As String
 
         If eye_in.Checked = True Then
@@ -1004,6 +1097,8 @@ Public Class packageoil
         Else
             eye_vision = "0"
         End If
+
+
         cbc_result = tab2_result_txt.Text
         urine_result = RichTextBox6.Text
 
@@ -1019,7 +1114,7 @@ Public Class packageoil
         unders = txt_aid.Text
 
 
-        commandText2 = "UPDATE healthycare_ryh SET blood_pressure_result = '" & blood_pressure_result.Text & "',eye_result = '" & eye_result.Text & "',p_company = '" & txtcompany.Text & "' , p_id = '" & txtsearch.Text & "' , p_name = '" & txt_name.Text & "' , p_height = '" & tab1_txt_height.Text & "'  , p_weight = '" & tab1_tab_weight.Text & "', p_sex = '" & txt_sex.Text & "' , p_age = '" & txt_age.Text & "' , p_tell = '" & txt_tell.Text & "', p_add = '" & txt_address.Text & "', p_aid = '" & txt_aid.Text & "' , p_date = '" & txt_date.Text & "', p_pulse = '" & tab1_txt_pulserate.Text & "', p_bmi = '" & tab1_txt_bmi.Text & "',p_blood_pre = '" & tab1_txt_bloodp.Text & "',p_typevision = '" & eye_vision & "', p_eyeright = '" & tab1_txt_eyer.Text & "', p_eyeleft = '" & tab1_txt_eyel.Text & "',p_colorbindness = '" & Blind_Color.Text & "',phy_eye = '" & phy_eye & "' , phy_nec = '" & phy_nec & "' , phy_lun_che = '" & phy_lun_che & "', phy_hea = '" & phy_hea & "',phy_vas ='" & phy_vas & "' ,phy_abd ='" & phy_adb & "',phy_lym ='" & phy_lym & "',phy_gus = '" & phy_gus & "',phy_ext ='" & phy_ext & "', phy_spi ='" & phy_spi & "',  phy_ski = '" & phy_ski & "', phy_aud ='" & phy_aud & "',phy_lun_tes = '" & phy_lun_tes & "',phy_ekg_oil ='" & phy_ekg_oil & "',che_fbs = '" & tab4_txt_fbs.Text & "', che_bun ='" & tab5_txt_bun.Text & "',che_cre = '" & tab5_txt_creatinine.Text & "' ,che_cho = '" & tab5_txt_cholesterol.Text & "',che_tri = '" & tab5_txt_trigyceride.Text & "',che_sgo ='" & tab6_txt_sgot.Text & "' ,  che_sgp = '" & tab6_txt_sgpt.Text & "', che_alk = '" & tab6_txt_alkaline.Text & "' , che_uri = '" & tab5_txt_uricacid.Text & "',che_hdl = '" & tab5_txt_hdl.Text & "', che_ldl = '" & tab6_txt_ldl.Text & " ' ,che_afp = '" & tab6_txt_afp.Text & "',che_cea = '" & TextBox5.Text & "',che_mer = '" & TextBox6.Text & "' ,blo_gro = '" & tab2_txt_groupblood.Text & "', blo_rhe = '" & tab2_txt_rh.Text & "',blo_pla = '" & tab2_txt_plate.Text & "', tab6_result_psp = '" & tab6_result_psp.Text & "' , blo_redcell = '" & tab2_txt_redcell.Text & "' , blo_cbc_wbc = '" & tab2_txt_wbc.Text & "' ,blo_cbc_hct ='" & tab2_txt_hct.Text & "',blo_cbc_hb = '" & tab2_txt_hb.Text & "',blo_cbc_l ='" & tab2_txt_lymphocytes.Text & "',blo_cbc_m = '" & tab2_txt_monocytes.Text & "',blo_cbc_e = '" & tab2_txt_eosinophils.Text & "',blo_cbc_b = '" & tab2_txt_bashophils.Text & "',blo_cbc_n = '" & tab2_txt_neutrophils.Text & "',blo_cbc_a = '" & tab2_txt_atypical.Text & "',uri_col = '" & tab3_txt_color.Text & "',uri_spg='" & tab3_txt_spgr.Text & "', uri_alb = '" & tab3_txt_albumin.Text & "', uri_blo = '" & tab3_txt_blood.Text & "',uri_epi = '" & tab3_txt_epi.Text & "', uri_app = '" & tab3_txt_appearance.Text & "', uri_ph = '" & tab3_txt_ph.Text & "', uri_glu = '" & tab3_txt_glucose.Text & "',uri_rbe='" & tab3_txt_rbc.Text & "',uri_wbc = '" & tab3_txt_wbc.Text & "', uri_other = '" & tab3_txt_other.Text & "',sto_wbc = '" & tab6_stool_wbc.Text & "',sto_rbc = '" & tab6_stool_rbc.Text & "',sto_ova = '" & tab6_stool_parasites.Text & "',sto_occ='" & tab6_stool_blood.Text & "',xray = '" & tab4_result_x_ray.Text & "' ,result_phy ='" & tab4_result_phy.Text & "',result_psp='" & tab6_result_psp.Text & "',hiv = '" & tab3_txt_hiv.Text & "',vdrl  ='" & tab3_txt_vdrl.Text & "',vir_sag = '" & txt_hbsag.Text & "',vir_sab='" & txt_hbsab.Text & "' ,vir_cab='" & txt_hbcab.Text & "',vir_igg='" & txt_anti_igg.Text & "',vir_igm ='" & txt_hav_igm.Text & "',package_type ='Oil',result_eye='" & RichTextBox5.Text & "',eye_1='" & ComboBox25.Text & "',blind ='" & Blind_Color.Text & "',result_blind ='" & tab1_result_blindness.Text & "',check_eye = '" & ComboBox1.Text & "' ,result_check_eye ='" & tab1_result_eye.Text & "',teeth='" & ComboBox24.Text & "',result_teeth='" & tab1_result_tooth.Text & "',result_all ='" & RichTextBox1.Text & "',doctor_name = '" & txt_doctor_name.Text & "',license = '" & txt_license.Text & "',result_fit='" & txt_other_fit.Text & "',amphetamine = '" & tab3_txt_amphetamine.Text & "',stool_culture = '" & ComboBox26.Text & "',tab2_result='" & tab2_result_txt.Text & "',tab4_result_fbs ='" & tab4_result_fbs.Text & "',tab4_result_vdrl='" & tab4_result_vdrl.Text & "',tab4_result_hiv='" & RichTextBox3.Text & "',tab5_result_bun ='" & tab5_result_bun.Text & "',tab5_result_cholesterol ='" & tab5_result_cholesterol.Text & "',tab5_result_creatinine = '" & tab5_result_creatinine.Text & "',tab5_result_trigyceride='" & tab5_result_trigyceride.Text & "',tab5_result_uric_acid ='" & tab5_result_trigyceride.Text & "',tab5_result_hdl ='" & tab5_result_hdl.Text & "',tab6_result_ldl ='" & tab6_result_ldl.Text & "',tab6_result_alkaline='" & tab6_result_alkaline.Text & "' ,tab6_result_sgot='" & tab6_result_sgot.Text & "',tab6_result_afp='" & tab6_result_afp.Text & "',tab_result_spgt ='" & tab6_result_spgt.Text & "',tab6_result_psp='" & tab6_result_psp.Text & "',tab6_result_virus_b ='" & tab6_result_virus_b.Text & "',tab6_result_stool ='" & tab6_result_stool.Text & "',tab6_result_cea ='" & RichTextBox2.Text & "',tab6_result_mercury ='" & RichTextBox4.Text & "',p_lastname ='" & txt_lastname.Text & "',che_pap='" & ComboBox19.Text & "',glass ='" & glass & "' ,fit_oil = '" & fit_check & "', fit_spec= '" & spec & "' , fit_air ='" & fitair & "' , fit_breath= '" & fitbreath & "', fit_crane = '" & fitcrance & "', fit_emergency = '" & fitemergency & "' , fit_food ='" & fitfood & "'  WHERE idhealthycare = " & health & "; "
+        commandText2 = "UPDATE healthycare_ryh SET blood_pressure_result = '" & blood_pressure_result.Text & "',eye_result = '" & eye_result.Text & "',p_company = '" & txtcompany.Text & "' , p_id = '" & txtsearch.Text & "' , p_name = '" & txt_name.Text & "' , p_height = '" & tab1_txt_height.Text & "'  , p_weight = '" & tab1_tab_weight.Text & "', p_sex = '" & txt_sex.Text & "' , p_age = '" & txt_age.Text & "' , p_tell = '" & txt_tell.Text & "', p_add = '" & txt_address.Text & "', p_aid = '" & txt_aid.Text & "' , p_date = '" & txt_date.Text & "', p_pulse = '" & tab1_txt_pulserate.Text & "', p_bmi = '" & tab1_txt_bmi.Text & "',p_blood_pre = '" & tab1_txt_bloodp.Text & "',p_typevision = '" & eye_vision & "', p_eyeright = '" & tab1_txt_eyer.Text & "', p_eyeleft = '" & tab1_txt_eyel.Text & "',p_colorbindness = '" & Blind_Color.Text & "',phy_eye = '" & phy_eye & "' , phy_nec = '" & phy_nec & "' , phy_lun_che = '" & phy_lun_che & "', phy_hea = '" & phy_hea & "',phy_vas ='" & phy_vas & "' ,phy_abd ='" & phy_adb & "',phy_lym ='" & phy_lym & "',phy_gus = '" & phy_gus & "',phy_ext ='" & phy_ext & "', phy_spi ='" & phy_spi & "',  phy_ski = '" & phy_ski & "', phy_aud ='" & phy_aud & "',phy_lun_tes = '" & phy_lun_tes & "',phy_ekg_oil ='" & phy_ekg_oil & "',che_fbs = '" & tab4_txt_fbs.Text & "', che_bun ='" & tab5_txt_bun.Text & "',che_cre = '" & tab5_txt_creatinine.Text & "' ,che_cho = '" & tab5_txt_cholesterol.Text & "',che_tri = '" & tab5_txt_trigyceride.Text & "',che_sgo ='" & tab6_txt_sgot.Text & "' ,  che_sgp = '" & tab6_txt_sgpt.Text & "', che_alk = '" & tab6_txt_alkaline.Text & "' , che_uri = '" & tab5_txt_uricacid.Text & "',che_hdl = '" & tab5_txt_hdl.Text & "', che_ldl = '" & tab6_txt_ldl.Text & " ' ,che_afp = '" & tab6_txt_afp.Text & "',che_cea = '" & TextBox5.Text & "',che_mer = '" & TextBox6.Text & "' ,blo_gro = '" & tab2_txt_groupblood.Text & "', blo_rhe = '" & tab2_txt_rh.Text & "',blo_pla = '" & tab2_txt_plate.Text & "', tab6_result_psp = '" & tab6_result_psp.Text & "' , blo_redcell = '" & tab2_txt_redcell.Text & "' , blo_cbc_wbc = '" & tab2_txt_wbc.Text & "' ,blo_cbc_hct ='" & tab2_txt_hct.Text & "',blo_cbc_hb = '" & tab2_txt_hb.Text & "',blo_cbc_l ='" & tab2_txt_lymphocytes.Text & "',blo_cbc_m = '" & tab2_txt_monocytes.Text & "',blo_cbc_e = '" & tab2_txt_eosinophils.Text & "',blo_cbc_b = '" & tab2_txt_bashophils.Text & "',blo_cbc_n = '" & tab2_txt_neutrophils.Text & "',blo_cbc_a = '" & tab2_txt_atypical.Text & "',uri_col = '" & tab3_txt_color.Text & "',uri_spg='" & tab3_txt_spgr.Text & "', uri_alb = '" & tab3_txt_albumin.Text & "', uri_blo = '" & tab3_txt_blood.Text & "',uri_epi = '" & tab3_txt_epi.Text & "', uri_app = '" & tab3_txt_appearance.Text & "', uri_ph = '" & tab3_txt_ph.Text & "', uri_glu = '" & tab3_txt_glucose.Text & "',uri_rbe='" & tab3_txt_rbc.Text & "',uri_wbc = '" & tab3_txt_wbc.Text & "', uri_other = '" & tab3_txt_other.Text & "',sto_wbc = '" & tab6_stool_wbc.Text & "',sto_rbc = '" & tab6_stool_rbc.Text & "',sto_ova = '" & tab6_stool_parasites.Text & "',sto_occ='" & tab6_stool_blood.Text & "',xray = '" & tab4_result_x_ray.Text & "' ,result_phy ='" & tab4_result_phy.Text & "',result_psp='" & tab6_result_psp.Text & "',hiv = '" & tab3_txt_hiv.Text & "',vdrl  ='" & tab3_txt_vdrl.Text & "',vir_sag = '" & txt_hbsag.Text & "',vir_sab='" & txt_hbsab.Text & "' ,vir_cab='" & txt_hbcab.Text & "',vir_igg='" & txt_anti_igg.Text & "',vir_igm ='" & txt_hav_igm.Text & "',package_type ='Oil',result_eye='" & RichTextBox5.Text & "',eye_1='" & ComboBox25.Text & "',blind ='" & Blind_Color.Text & "',result_blind ='" & tab1_result_blindness.Text & "',check_eye = '" & ComboBox1.Text & "' ,result_check_eye ='" & tab1_result_eye.Text & "',teeth='" & ComboBox24.Text & "',result_teeth='" & tab1_result_tooth.Text & "',result_all ='" & RichTextBox1.Text & "',doctor_name = '" & txt_doctor_name.Text & "',license = '" & txt_license.Text & "',result_fit='" & txt_other_fit.Text & "',amphetamine = '" & tab3_txt_amphetamine.Text & "',stool_culture = '" & ComboBox26.Text & "',tab2_result='" & tab2_result_txt.Text & "',tab4_result_fbs ='" & tab4_result_fbs.Text & "',tab4_result_vdrl='" & tab4_result_vdrl.Text & "',tab4_result_hiv='" & RichTextBox3.Text & "',tab5_result_bun ='" & tab5_result_bun.Text & "',tab5_result_cholesterol ='" & tab5_result_cholesterol.Text & "',tab5_result_creatinine = '" & tab5_result_creatinine.Text & "',tab5_result_trigyceride='" & tab5_result_trigyceride.Text & "',tab5_result_uric_acid ='" & tab5_result_trigyceride.Text & "',tab5_result_hdl ='" & tab5_result_hdl.Text & "',tab6_result_ldl ='" & tab6_result_ldl.Text & "',tab6_result_alkaline='" & tab6_result_alkaline.Text & "' ,tab6_result_sgot='" & tab6_result_sgot.Text & "',tab6_result_afp='" & tab6_result_afp.Text & "',tab_result_spgt ='" & tab6_result_spgt.Text & "',tab6_result_psp='" & tab6_result_psp.Text & "',tab6_result_virus_b ='" & tab6_result_virus_b.Text & "',tab6_result_stool ='" & tab6_result_stool.Text & "',tab6_result_cea ='" & RichTextBox2.Text & "',tab6_result_mercury ='" & RichTextBox4.Text & "',p_lastname ='" & txt_lastname.Text & "',che_pap='" & ComboBox19.Text & "',glass ='" & glass & "' ,fit_oil = '" & fit_check & "', fit_spec= '" & spec & "' , fit_air ='" & fitair & "' , fit_breath= '" & fitbreath & "', fit_crane = '" & fitcrance & "', fit_emergency = '" & fitemergency & "' , fit_food ='" & fitfood & "'  , phy_est ='" & est & "'  , phy_ust = '" & ust & "'  WHERE idhealthycare = " & health & "; "
         mySqlCommand.CommandText = commandText2
         mySqlCommand.CommandType = CommandType.Text
         mySqlCommand.Connection = mysql
@@ -1158,6 +1253,8 @@ Public Class packageoil
             phy_lym = "2"
         End If
 
+
+
         Dim phy_gus As String = " "
 
         If gu1.Checked = True Then
@@ -1275,9 +1372,33 @@ Public Class packageoil
             fitfood = "0"
         End If
 
+        Dim ust As String
+        If ust1.Checked = True Then
+            ust = "0"
+
+        ElseIf ust2.Checked = True Then
+            ust = "1"
+
+        ElseIf ust3.Checked = True Then
+
+            ust = "2"
+
+        End If
 
 
-        commandText2 = "UPDATE healthycare_ryh SET p_company = '" & txtcompany.Text & "' , p_id = '" & txtsearch.Text & "' , p_name = '" & txt_name.Text & "' , p_height = '" & tab1_txt_height.Text & "'  , p_weight = '" & tab1_tab_weight.Text & "', p_sex = '" & txt_sex.Text & "' , p_age = '" & txt_age.Text & "' , p_tell = '" & txt_tell.Text & "', p_add = '" & txt_address.Text & "', p_aid = '" & txt_aid.Text & "' , p_date = '" & txt_date.Text & "', p_pulse = '" & tab1_txt_pulserate.Text & "', p_bmi = '" & tab1_txt_bmi.Text & "',p_blood_pre = '" & tab1_txt_bloodp.Text & "',p_typevision = '" & eye_vision & "', p_eyeright = '" & tab1_txt_eyer.Text & "', p_eyeleft = '" & tab1_txt_eyel.Text & "',p_colorbindness = '" & Blind_Color.Text & "',phy_eye = '" & phy_eye & "' , phy_nec = '" & phy_nec & "' , phy_lun_che = '" & phy_lun_che & "', phy_hea = '" & phy_hea & "',phy_vas ='" & phy_vas & "' ,phy_abd ='" & phy_adb & "',phy_lym ='" & phy_lym & "',phy_gus = '" & phy_gus & "',phy_ext ='" & phy_ext & "', phy_spi ='" & phy_spi & "',  phy_ski = '" & phy_ski & "', phy_aud ='" & phy_aud & "',phy_lun_tes = '" & phy_lun_tes & "',phy_ekg_oil ='" & phy_ekg_oil & "',che_fbs = '" & tab4_txt_fbs.Text & "', che_bun ='" & tab5_txt_bun.Text & "',che_cre = '" & tab5_txt_creatinine.Text & "' ,che_cho = '" & tab5_txt_cholesterol.Text & "',che_tri = '" & tab5_txt_trigyceride.Text & "',che_sgo ='" & tab6_txt_sgot.Text & "' ,  che_sgp = '" & tab6_txt_sgpt.Text & "', che_alk = '" & tab6_txt_alkaline.Text & "' , che_uri = '" & tab5_txt_uricacid.Text & "',che_hdl = '" & tab5_txt_hdl.Text & "', che_ldl = '" & tab6_txt_ldl.Text & " ' ,che_afp = '" & tab6_txt_afp.Text & "',che_cea = '" & TextBox5.Text & "',che_mer = '" & TextBox6.Text & "' ,blo_gro = '" & tab2_txt_groupblood.Text & "', blo_rhe = '" & tab2_txt_rh.Text & "',blo_pla = '" & tab2_txt_plate.Text & "', tab6_result_psp = '" & tab6_result_psp.Text & "' , blo_redcell = '" & tab2_txt_redcell.Text & "' , blo_cbc_wbc = '" & tab2_txt_wbc.Text & "' ,blo_cbc_hct ='" & tab2_txt_hct.Text & "',blo_cbc_hb = '" & tab2_txt_hb.Text & "',blo_cbc_l ='" & tab2_txt_lymphocytes.Text & "',blo_cbc_m = '" & tab2_txt_monocytes.Text & "',blo_cbc_e = '" & tab2_txt_eosinophils.Text & "',blo_cbc_b = '" & tab2_txt_bashophils.Text & "',blo_cbc_n = '" & tab2_txt_neutrophils.Text & "',blo_cbc_a = '" & tab2_txt_atypical.Text & "',uri_col = '" & tab3_txt_color.Text & "',uri_spg='" & tab3_txt_spgr.Text & "', uri_alb = '" & tab3_txt_albumin.Text & "', uri_blo = '" & tab3_txt_blood.Text & "',uri_epi = '" & tab3_txt_epi.Text & "', uri_app = '" & tab3_txt_appearance.Text & "', uri_ph = '" & tab3_txt_ph.Text & "', uri_glu = '" & tab3_txt_glucose.Text & "',uri_rbe='" & tab3_txt_rbc.Text & "',uri_wbc = '" & tab3_txt_wbc.Text & "', uri_other = '" & tab3_txt_other.Text & "',sto_wbc = '" & tab6_stool_wbc.Text & "',sto_rbc = '" & tab6_stool_rbc.Text & "',sto_ova = '" & tab6_stool_parasites.Text & "',sto_occ='" & tab6_stool_blood.Text & "',xray = '" & tab4_result_x_ray.Text & "' ,result_phy ='" & tab4_result_phy.Text & "',result_psp='" & tab6_result_psp.Text & "',hiv = '" & tab3_txt_hiv.Text & "',vdrl  ='" & tab3_txt_vdrl.Text & "',vir_sag = '" & txt_hbsag.Text & "',vir_sab='" & txt_hbsab.Text & "' ,vir_cab='" & txt_hbcab.Text & "',vir_igg='" & txt_anti_igg.Text & "',vir_igm ='" & txt_hav_igm.Text & "',package_type ='Oil',result_eye='" & RichTextBox5.Text & "',eye_1='" & ComboBox25.Text & "',blind ='" & Blind_Color.Text & "',result_blind ='" & tab1_result_blindness.Text & "',check_eye = '" & ComboBox1.Text & "' ,result_check_eye ='" & tab1_result_eye.Text & "',teeth='" & ComboBox24.Text & "',result_teeth='" & tab1_result_tooth.Text & "',result_all ='" & MySqlHelper.EscapeString(RichTextBox1.Text) & "',doctor_name = '" & txt_doctor_name.Text & "',license = '" & txt_license.Text & "',result_fit='" & txt_other_fit.Text & "',amphetamine = '" & tab3_txt_amphetamine.Text & "',stool_culture = '" & ComboBox26.Text & "',tab2_result='" & tab2_result_txt.Text & "',tab4_result_fbs ='" & tab4_result_fbs.Text & "',tab4_result_vdrl='" & tab4_result_vdrl.Text & "',tab4_result_hiv='" & RichTextBox3.Text & "',tab5_result_bun ='" & tab5_result_bun.Text & "',tab5_result_cholesterol ='" & tab5_result_cholesterol.Text & "',tab5_result_creatinine = '" & tab5_result_creatinine.Text & "',tab5_result_trigyceride='" & tab5_result_trigyceride.Text & "',tab5_result_uric_acid ='" & tab5_result_trigyceride.Text & "',tab5_result_hdl ='" & tab5_result_hdl.Text & "',tab6_result_ldl ='" & tab6_result_ldl.Text & "',tab6_result_alkaline='" & tab6_result_alkaline.Text & "' ,tab6_result_sgot='" & tab6_result_sgot.Text & "',tab6_result_afp='" & tab6_result_afp.Text & "',tab_result_spgt ='" & tab6_result_spgt.Text & "',tab6_result_psp='" & tab6_result_psp.Text & "',tab6_result_virus_b ='" & tab6_result_virus_b.Text & "',tab6_result_stool ='" & tab6_result_stool.Text & "',tab6_result_cea ='" & RichTextBox2.Text & "',tab6_result_mercury ='" & RichTextBox4.Text & "',p_lastname ='" & txt_lastname.Text & "',che_pap='" & ComboBox19.Text & "',glass ='" & glass & "' ,fit_oil = '" & fit_check & "', fit_spec= '" & spec & "' , fit_air ='" & fitair & "' , fit_breath= '" & fitbreath & "', fit_crane = '" & fitcrance & "', fit_emergency = '" & fitemergency & "' , fit_food ='" & fitfood & "' WHERE idhealthycare = " & health & "; "
+        Dim phy_est As String = ""
+        If est1.Checked = True Then
+            phy_est = "0"
+        ElseIf est2.Checked = True Then
+            phy_est = "1"
+
+        ElseIf est3.Checked = True Then
+            phy_est = "2"
+
+        End If
+
+
+        commandText2 = "UPDATE healthycare_ryh SET p_company = '" & txtcompany.Text & "' , p_id = '" & txtsearch.Text & "' , p_name = '" & txt_name.Text & "' , p_height = '" & tab1_txt_height.Text & "'  , p_weight = '" & tab1_tab_weight.Text & "', p_sex = '" & txt_sex.Text & "' , p_age = '" & txt_age.Text & "' , p_tell = '" & txt_tell.Text & "', p_add = '" & txt_address.Text & "', p_aid = '" & txt_aid.Text & "' , p_date = '" & txt_date.Text & "', p_pulse = '" & tab1_txt_pulserate.Text & "', p_bmi = '" & tab1_txt_bmi.Text & "',p_blood_pre = '" & tab1_txt_bloodp.Text & "',p_typevision = '" & eye_vision & "', p_eyeright = '" & tab1_txt_eyer.Text & "', p_eyeleft = '" & tab1_txt_eyel.Text & "',p_colorbindness = '" & Blind_Color.Text & "',phy_eye = '" & phy_eye & "' , phy_nec = '" & phy_nec & "' , phy_lun_che = '" & phy_lun_che & "', phy_hea = '" & phy_hea & "',phy_vas ='" & phy_vas & "' ,phy_abd ='" & phy_adb & "',phy_lym ='" & phy_lym & "',phy_gus = '" & phy_gus & "',phy_ext ='" & phy_ext & "', phy_spi ='" & phy_spi & "',  phy_ski = '" & phy_ski & "', phy_aud ='" & phy_aud & "',phy_lun_tes = '" & phy_lun_tes & "',phy_ekg_oil ='" & phy_ekg_oil & "',che_fbs = '" & tab4_txt_fbs.Text & "', che_bun ='" & tab5_txt_bun.Text & "',che_cre = '" & tab5_txt_creatinine.Text & "' ,che_cho = '" & tab5_txt_cholesterol.Text & "',che_tri = '" & tab5_txt_trigyceride.Text & "',che_sgo ='" & tab6_txt_sgot.Text & "' ,  che_sgp = '" & tab6_txt_sgpt.Text & "', che_alk = '" & tab6_txt_alkaline.Text & "' , che_uri = '" & tab5_txt_uricacid.Text & "',che_hdl = '" & tab5_txt_hdl.Text & "', che_ldl = '" & tab6_txt_ldl.Text & " ' ,che_afp = '" & tab6_txt_afp.Text & "',che_cea = '" & TextBox5.Text & "',che_mer = '" & TextBox6.Text & "' ,blo_gro = '" & tab2_txt_groupblood.Text & "', blo_rhe = '" & tab2_txt_rh.Text & "',blo_pla = '" & tab2_txt_plate.Text & "', tab6_result_psp = '" & tab6_result_psp.Text & "' , blo_redcell = '" & tab2_txt_redcell.Text & "' , blo_cbc_wbc = '" & tab2_txt_wbc.Text & "' ,blo_cbc_hct ='" & tab2_txt_hct.Text & "',blo_cbc_hb = '" & tab2_txt_hb.Text & "',blo_cbc_l ='" & tab2_txt_lymphocytes.Text & "',blo_cbc_m = '" & tab2_txt_monocytes.Text & "',blo_cbc_e = '" & tab2_txt_eosinophils.Text & "',blo_cbc_b = '" & tab2_txt_bashophils.Text & "',blo_cbc_n = '" & tab2_txt_neutrophils.Text & "',blo_cbc_a = '" & tab2_txt_atypical.Text & "',uri_col = '" & tab3_txt_color.Text & "',uri_spg='" & tab3_txt_spgr.Text & "', uri_alb = '" & tab3_txt_albumin.Text & "', uri_blo = '" & tab3_txt_blood.Text & "',uri_epi = '" & tab3_txt_epi.Text & "', uri_app = '" & tab3_txt_appearance.Text & "', uri_ph = '" & tab3_txt_ph.Text & "', uri_glu = '" & tab3_txt_glucose.Text & "',uri_rbe='" & tab3_txt_rbc.Text & "',uri_wbc = '" & tab3_txt_wbc.Text & "', uri_other = '" & tab3_txt_other.Text & "',sto_wbc = '" & tab6_stool_wbc.Text & "',sto_rbc = '" & tab6_stool_rbc.Text & "',sto_ova = '" & tab6_stool_parasites.Text & "',sto_occ='" & tab6_stool_blood.Text & "',xray = '" & tab4_result_x_ray.Text & "' ,result_phy ='" & tab4_result_phy.Text & "',result_psp='" & tab6_result_psp.Text & "',hiv = '" & tab3_txt_hiv.Text & "',vdrl  ='" & tab3_txt_vdrl.Text & "',vir_sag = '" & txt_hbsag.Text & "',vir_sab='" & txt_hbsab.Text & "' ,vir_cab='" & txt_hbcab.Text & "',vir_igg='" & txt_anti_igg.Text & "',vir_igm ='" & txt_hav_igm.Text & "',package_type ='Oil',result_eye='" & RichTextBox5.Text & "',eye_1='" & ComboBox25.Text & "',blind ='" & Blind_Color.Text & "',result_blind ='" & tab1_result_blindness.Text & "',check_eye = '" & ComboBox1.Text & "' ,result_check_eye ='" & tab1_result_eye.Text & "',teeth='" & ComboBox24.Text & "',result_teeth='" & tab1_result_tooth.Text & "',result_all ='" & MySqlHelper.EscapeString(RichTextBox1.Text) & "',doctor_name = '" & txt_doctor_name.Text & "',license = '" & txt_license.Text & "',result_fit='" & txt_other_fit.Text & "',amphetamine = '" & tab3_txt_amphetamine.Text & "',stool_culture = '" & ComboBox26.Text & "',tab2_result='" & tab2_result_txt.Text & "',tab4_result_fbs ='" & tab4_result_fbs.Text & "',tab4_result_vdrl='" & tab4_result_vdrl.Text & "',tab4_result_hiv='" & RichTextBox3.Text & "',tab5_result_bun ='" & tab5_result_bun.Text & "',tab5_result_cholesterol ='" & tab5_result_cholesterol.Text & "',tab5_result_creatinine = '" & tab5_result_creatinine.Text & "',tab5_result_trigyceride='" & tab5_result_trigyceride.Text & "',tab5_result_uric_acid ='" & tab5_result_trigyceride.Text & "',tab5_result_hdl ='" & tab5_result_hdl.Text & "',tab6_result_ldl ='" & tab6_result_ldl.Text & "',tab6_result_alkaline='" & tab6_result_alkaline.Text & "' ,tab6_result_sgot='" & tab6_result_sgot.Text & "',tab6_result_afp='" & tab6_result_afp.Text & "',tab_result_spgt ='" & tab6_result_spgt.Text & "',tab6_result_psp='" & tab6_result_psp.Text & "',tab6_result_virus_b ='" & tab6_result_virus_b.Text & "',tab6_result_stool ='" & tab6_result_stool.Text & "',tab6_result_cea ='" & RichTextBox2.Text & "',tab6_result_mercury ='" & RichTextBox4.Text & "',p_lastname ='" & txt_lastname.Text & "',che_pap='" & ComboBox19.Text & "',glass ='" & glass & "' ,fit_oil = '" & fit_check & "', fit_spec= '" & spec & "' , fit_air ='" & fitair & "' , fit_breath= '" & fitbreath & "', fit_crane = '" & fitcrance & "', fit_emergency = '" & fitemergency & "' , fit_food ='" & fitfood & "' , phy_est ='" & phy_est & "'  , phy_ust = '" & ust & "' WHERE idhealthycare = " & health & "; "
         mySqlCommand.CommandText = commandText2
         mySqlCommand.CommandType = CommandType.Text
         mySqlCommand.Connection = mysql
@@ -1289,4 +1410,6 @@ Public Class packageoil
         '  Dim NextForm As main_user = New main_user()
         NextForm.Show()
     End Sub
+
+
 End Class

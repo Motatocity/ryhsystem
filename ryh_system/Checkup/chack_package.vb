@@ -44,6 +44,8 @@ Public Class chack_package
         mysql = New MySqlConnection
         ' mysql.ConnectionString = "server=" + ipconnect + ";user id=" + usernamedb + ";password=" + mysqlpass + ";database=" + dbname + ";Character Set =utf8;"
         ipconnect = "ryh1"
+        ipconnect = "192.0.0.200"
+
         mysqlpass = "software"
         usernamedb = "june"
         dbname = "rajyindee_db"
@@ -61,7 +63,7 @@ Public Class chack_package
         Dim mySqlReader As MySqlDataReader
 
         'mySqlCommand.CommandText = "SELECT DISTINCT * from Employee where dept_id in (SELECT dept_id from Department where dept_name like" + " '%" + TextBox1.Text + "%' )" + " or emp_name like " + "'%" + TextBox1.Text + "%'" + " or emp_surname like " + "'%" + TextBox1.Text + "%'" + " or emp_position like " + "'%" + TextBox1.Text + "%'" + " or emp_level like " + "'%" + TextBox1.Text + "%'" + ";"
-        mySqlCommand.CommandText = "SELECT * FROM healthycare_ryh order by idhealthycare;"
+        mySqlCommand.CommandText = "SELECT * FROM healthycare_ryh order by idhealthycare DESC LIMIT 100;"
         ' mySqlCommand.CommandText = 
         mySqlCommand.Connection = mysql
         mySqlAdaptor.SelectCommand = mySqlCommand
@@ -104,7 +106,7 @@ Public Class chack_package
 
 
         'mySqlCommand.CommandText = "SELECT DISTINCT * from Employee where dept_id in (SELECT dept_id from Department where dept_name like" + " '%" + TextBox1.Text + "%' )" + " or emp_name like " + "'%" + TextBox1.Text + "%'" + " or emp_surname like " + "'%" + TextBox1.Text + "%'" + " or emp_position like " + "'%" + TextBox1.Text + "%'" + " or emp_level like " + "'%" + TextBox1.Text + "%'" + ";"
-        mySqlCommand.CommandText = "SELECT * FROM healthycare_ryh where idhealthycare like" + "'%" + key + "%' or  p_id like '%" + key + "%'  or  p_name like '%" + key + "%'   or  package_type like '%" + key + "%' order by idhealthycare;"
+        mySqlCommand.CommandText = "SELECT * FROM healthycare_ryh where idhealthycare like" + "'%" + key + "%' or  p_id like '%" + key + "%'  or  p_name like '%" + key + "%'   or  package_type like '%" + key + "%' order by idhealthycare DESC LIMIT 100;"
         ' mySqlCommand.CommandText = 
         mySqlCommand.Connection = mysql
         mySqlAdaptor.SelectCommand = mySqlCommand
@@ -148,7 +150,7 @@ Public Class chack_package
 
 
         key = ListView1.SelectedItems(0).SubItems(3).Text
-        ipconnect = "ryh1"
+        ipconnect = "192.0.0.200"
         mysqlpass = "software"
         usernamedb = "june"
         dbname = "rajyindee_db"
@@ -271,7 +273,7 @@ Public Class chack_package
 
 
         key = ListView1.SelectedItems(0).SubItems(3).Text
-        ipconnect = "ryh1"
+        ipconnect = "192.0.0.200"
         mysqlpass = "software"
         usernamedb = "june"
         dbname = "rajyindee_db"

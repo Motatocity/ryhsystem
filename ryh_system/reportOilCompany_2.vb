@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class reportOilCompany1
+Public Class reportOilCompany_2
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class reportOilCompany1
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "reportOilCompany1.rpt"
+            Return "reportOilCompany_2.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class reportOilCompany1
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "ryh_system.reportOilCompany1.rpt"
+            Return "ryh_system.reportOilCompany_2.rpt"
         End Get
         Set
             'Do nothing
@@ -1027,10 +1027,34 @@ Public Class reportOilCompany1
             Return Me.DataDefinition.ParameterFields(116)
         End Get
     End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Parameter_dteexpire() As CrystalDecisions.[Shared].IParameterField
+        Get
+            Return Me.DataDefinition.ParameterFields(117)
+        End Get
+    End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Parameter_est_a() As CrystalDecisions.[Shared].IParameterField
+        Get
+            Return Me.DataDefinition.ParameterFields(118)
+        End Get
+    End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Parameter_ust_a() As CrystalDecisions.[Shared].IParameterField
+        Get
+            Return Me.DataDefinition.ParameterFields(119)
+        End Get
+    End Property
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedreportOilCompany1
+Public Class CachedreportOilCompany_2
     Inherits Component
     Implements ICachedReport
     
@@ -1072,7 +1096,7 @@ Public Class CachedreportOilCompany1
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As reportOilCompany1 = New reportOilCompany1()
+        Dim rpt As reportOilCompany_2 = New reportOilCompany_2()
         rpt.Site = Me.Site
         Return rpt
     End Function

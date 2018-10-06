@@ -16,7 +16,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
-    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <SccProjectName>
     </SccProjectName>
     <SccLocalPath>
@@ -25,9 +25,9 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
-    <PublishUrl>ftp://ryh1/</PublishUrl>
+    <PublishUrl>\\192.0.0.41\publish\ryh_system\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Web</InstallFrom>
+    <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>1</UpdateInterval>
@@ -35,13 +35,12 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://ryh1/ryhsystem/</InstallUrl>
     <TargetCulture>th-TH</TargetCulture>
     <MinimumRequiredVersion>1.0.0.184</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>460</ApplicationRevision>
+    <ApplicationRevision>465</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -145,18 +144,10 @@
     <OutputPath>bin\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar.Design, Version=11.5.1.1, Culture=neutral, PublicKeyToken=90f470f34c89ccaf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.DotNetBar.Design.dll</HintPath>
@@ -212,32 +203,32 @@
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.TreeGX.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Data.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
-    <Reference Include="Dotnetrix.TabControl">
-      <HintPath>D:\Desktop\Dotnetrix.TabControl.dll</HintPath>
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="EPPlus">
-      <HintPath>D:\Desktop\EPPlus.dll</HintPath>
+    <Reference Include="EPPlus, Version=4.5.2.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.4.5.2.1\lib\net40\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -248,23 +239,19 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.Office.Tools.Excel.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
-      <Private>True</Private>
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\MYFRI\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="mysql.data">
-      <HintPath>..\..\..\..\..\Desktop\HelpDesk\HelpDesk\bin\Debug\mysql.data.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+    <Reference Include="office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data">
       <Private>True</Private>
     </Reference>
@@ -309,11 +296,19 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="TabControlEX">
-      <HintPath>D:\Desktop\TabControlEX.dll</HintPath>
+      <HintPath>E:\TabControlEX.dll</HintPath>
     </Reference>
     <Reference Include="UIAutomationClient" />
   </ItemGroup>
   <ItemGroup>
+    <Import Include="CrystalDecisions.ReportAppServer" />
+    <Import Include="CrystalDecisions.ReportSource" />
+    <Import Include="CrystalDecisions.Shared" />
+    <Import Include="CrystalDecisions.Shared.Interop" />
+    <Import Include="CrystalDecisions.Shared.Json" />
+    <Import Include="CrystalDecisions.Web.HtmlReportRender" />
+    <Import Include="CrystalDecisions.Windows.Forms" />
+    <Import Include="CrystalDecisions.Windows.Forms.Internal.Win32" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
@@ -1651,10 +1646,10 @@
       <DependentUpon>reportOilCompany.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="reportOilCompany11.vb">
+    <Compile Include="reportOilCompany_2.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>reportOilCompany1.rpt</DependentUpon>
+      <DependentUpon>reportOilCompany_2.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="reportRisk.vb">
@@ -2394,6 +2389,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="prnOilPackage.resx">
       <DependentUpon>prnOilPackage.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="reportcount.resx">
       <DependentUpon>reportcount.vb</DependentUpon>
@@ -2402,9 +2398,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reportOilCompany.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="reportOilCompany1.rpt">
+    <EmbeddedResource Include="reportOilCompany_2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>reportOilCompany11.vb</LastGenOutput>
+      <LastGenOutput>reportOilCompany_2.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reportRisk.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -2972,7 +2968,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.Office.v14.1.Core">
+    <PublishFile Include="DevExpress.Office.v17.1.Core">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2982,7 +2978,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.RichEdit.v14.1.Core">
+    <PublishFile Include="DevExpress.RichEdit.v17.1.Core">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2992,7 +2988,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.Sparkline.v14.1.Core">
+    <PublishFile Include="DevExpress.Sparkline.v17.1.Core">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3002,7 +2998,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.XtraBars.v14.1">
+    <PublishFile Include="DevExpress.XtraBars.v17.1">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3012,7 +3008,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.XtraTreeList.v14.1">
+    <PublishFile Include="DevExpress.XtraTreeList.v17.1">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3022,7 +3018,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraPrinting.v14.1.resources">
+    <PublishFile Include="de\DevExpress.XtraPrinting.v17.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3032,7 +3028,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.RichEdit.v14.1.Core.resources">
+    <PublishFile Include="es\DevExpress.RichEdit.v17.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3112,7 +3108,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Office.v14.1.Core.resources">
+    <PublishFile Include="ru\DevExpress.Office.v17.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3122,7 +3118,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Printing.v14.1.Core.resources">
+    <PublishFile Include="ru\DevExpress.Printing.v17.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3132,7 +3128,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.RichEdit.v14.1.Core.resources">
+    <PublishFile Include="ru\DevExpress.RichEdit.v17.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3142,7 +3138,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Sparkline.v14.1.Core.resources">
+    <PublishFile Include="ru\DevExpress.Sparkline.v17.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3152,7 +3148,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Utils.v14.1.resources">
+    <PublishFile Include="ru\DevExpress.Utils.v17.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3162,7 +3158,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraBars.v14.1.resources">
+    <PublishFile Include="ru\DevExpress.XtraBars.v17.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3172,7 +3168,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraTreeList.v14.1.resources">
+    <PublishFile Include="ru\DevExpress.XtraTreeList.v17.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>

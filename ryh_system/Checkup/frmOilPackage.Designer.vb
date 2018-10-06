@@ -44,6 +44,8 @@ Partial Class frmOilPackage
         Me.txtcompany = New System.Windows.Forms.TextBox()
         Me.TabControlEX1 = New Dotnetrix.Controls.TabControlEX()
         Me.TabPageEX1 = New Dotnetrix.Controls.TabPageEX()
+        Me.eye_result = New System.Windows.Forms.TextBox()
+        Me.blood_pressure_result = New System.Windows.Forms.TextBox()
         Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
         Me.ComboBox25 = New System.Windows.Forms.ComboBox()
         Me.tab1_result_tooth = New System.Windows.Forms.RichTextBox()
@@ -81,6 +83,16 @@ Partial Class frmOilPackage
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox43 = New System.Windows.Forms.GroupBox()
+        Me.ust3 = New System.Windows.Forms.RadioButton()
+        Me.ust2 = New System.Windows.Forms.RadioButton()
+        Me.ust1 = New System.Windows.Forms.RadioButton()
+        Me.Label204 = New System.Windows.Forms.Label()
+        Me.GroupBox27 = New System.Windows.Forms.GroupBox()
+        Me.est3 = New System.Windows.Forms.RadioButton()
+        Me.est2 = New System.Windows.Forms.RadioButton()
+        Me.est1 = New System.Windows.Forms.RadioButton()
+        Me.Label203 = New System.Windows.Forms.Label()
         Me.GroupBox34 = New System.Windows.Forms.GroupBox()
         Me.chest3 = New System.Windows.Forms.RadioButton()
         Me.chest2 = New System.Windows.Forms.RadioButton()
@@ -491,8 +503,9 @@ Partial Class frmOilPackage
         Me.Label201 = New System.Windows.Forms.Label()
         Me.dateconfirm = New DevComponents.DotNetBar.Controls.MaskedTextBoxAdv()
         Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.blood_pressure_result = New System.Windows.Forms.TextBox()
-        Me.eye_result = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtCertExp = New System.Windows.Forms.TextBox()
+        Me.Label205 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.TabControlEX1.SuspendLayout()
         Me.TabPageEX1.SuspendLayout()
@@ -502,6 +515,8 @@ Partial Class frmOilPackage
         Me.GroupBox32.SuspendLayout()
         Me.GroupBox33.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox43.SuspendLayout()
+        Me.GroupBox27.SuspendLayout()
         Me.GroupBox34.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -756,7 +771,7 @@ Partial Class frmOilPackage
         Me.TabControlEX1.Location = New System.Drawing.Point(12, 116)
         Me.TabControlEX1.Name = "TabControlEX1"
         Me.TabControlEX1.Padding = New System.Drawing.Point(3, 3)
-        Me.TabControlEX1.SelectedIndex = 0
+        Me.TabControlEX1.SelectedIndex = 7
         Me.TabControlEX1.SelectedTabColor = System.Drawing.Color.Gray
         Me.TabControlEX1.Size = New System.Drawing.Size(1154, 554)
         Me.TabControlEX1.TabIndex = 316
@@ -807,6 +822,22 @@ Partial Class frmOilPackage
         Me.TabPageEX1.Size = New System.Drawing.Size(1146, 525)
         Me.TabPageEX1.TabIndex = 0
         Me.TabPageEX1.Text = "การตรวจสุขภาพร่างกาย "
+        '
+        'eye_result
+        '
+        Me.eye_result.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.eye_result.Location = New System.Drawing.Point(15, 155)
+        Me.eye_result.Name = "eye_result"
+        Me.eye_result.Size = New System.Drawing.Size(552, 22)
+        Me.eye_result.TabIndex = 283
+        '
+        'blood_pressure_result
+        '
+        Me.blood_pressure_result.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.blood_pressure_result.Location = New System.Drawing.Point(380, 108)
+        Me.blood_pressure_result.Name = "blood_pressure_result"
+        Me.blood_pressure_result.Size = New System.Drawing.Size(193, 22)
+        Me.blood_pressure_result.TabIndex = 282
         '
         'RichTextBox5
         '
@@ -1199,6 +1230,8 @@ Partial Class frmOilPackage
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox43)
+        Me.GroupBox1.Controls.Add(Me.GroupBox27)
         Me.GroupBox1.Controls.Add(Me.GroupBox34)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
@@ -1223,6 +1256,110 @@ Partial Class frmOilPackage
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "การตรวจร่างกาย (Physical Examination)"
         '
+        'GroupBox43
+        '
+        Me.GroupBox43.Controls.Add(Me.ust3)
+        Me.GroupBox43.Controls.Add(Me.ust2)
+        Me.GroupBox43.Controls.Add(Me.ust1)
+        Me.GroupBox43.Controls.Add(Me.Label204)
+        Me.GroupBox43.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.GroupBox43.Location = New System.Drawing.Point(12, 465)
+        Me.GroupBox43.Name = "GroupBox43"
+        Me.GroupBox43.Size = New System.Drawing.Size(546, 30)
+        Me.GroupBox43.TabIndex = 23
+        Me.GroupBox43.TabStop = False
+        '
+        'ust3
+        '
+        Me.ust3.AutoSize = True
+        Me.ust3.Location = New System.Drawing.Point(508, 4)
+        Me.ust3.Name = "ust3"
+        Me.ust3.Size = New System.Drawing.Size(14, 13)
+        Me.ust3.TabIndex = 9
+        Me.ust3.UseVisualStyleBackColor = True
+        '
+        'ust2
+        '
+        Me.ust2.AutoSize = True
+        Me.ust2.Location = New System.Drawing.Point(419, 5)
+        Me.ust2.Name = "ust2"
+        Me.ust2.Size = New System.Drawing.Size(14, 13)
+        Me.ust2.TabIndex = 8
+        Me.ust2.UseVisualStyleBackColor = True
+        '
+        'ust1
+        '
+        Me.ust1.AutoSize = True
+        Me.ust1.Checked = True
+        Me.ust1.Location = New System.Drawing.Point(321, 6)
+        Me.ust1.Name = "ust1"
+        Me.ust1.Size = New System.Drawing.Size(14, 13)
+        Me.ust1.TabIndex = 7
+        Me.ust1.TabStop = True
+        Me.ust1.UseVisualStyleBackColor = True
+        '
+        'Label204
+        '
+        Me.Label204.AutoSize = True
+        Me.Label204.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label204.Location = New System.Drawing.Point(11, 1)
+        Me.Label204.Name = "Label204"
+        Me.Label204.Size = New System.Drawing.Size(276, 26)
+        Me.Label204.TabIndex = 6
+        Me.Label204.Text = "ultrasound whole abdomen(อัลตร้าซาวด์ช่องท้อง )"
+        '
+        'GroupBox27
+        '
+        Me.GroupBox27.Controls.Add(Me.est3)
+        Me.GroupBox27.Controls.Add(Me.est2)
+        Me.GroupBox27.Controls.Add(Me.est1)
+        Me.GroupBox27.Controls.Add(Me.Label203)
+        Me.GroupBox27.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.GroupBox27.Location = New System.Drawing.Point(11, 434)
+        Me.GroupBox27.Name = "GroupBox27"
+        Me.GroupBox27.Size = New System.Drawing.Size(546, 30)
+        Me.GroupBox27.TabIndex = 22
+        Me.GroupBox27.TabStop = False
+        '
+        'est3
+        '
+        Me.est3.AutoSize = True
+        Me.est3.Location = New System.Drawing.Point(508, 4)
+        Me.est3.Name = "est3"
+        Me.est3.Size = New System.Drawing.Size(14, 13)
+        Me.est3.TabIndex = 9
+        Me.est3.UseVisualStyleBackColor = True
+        '
+        'est2
+        '
+        Me.est2.AutoSize = True
+        Me.est2.Location = New System.Drawing.Point(419, 5)
+        Me.est2.Name = "est2"
+        Me.est2.Size = New System.Drawing.Size(14, 13)
+        Me.est2.TabIndex = 8
+        Me.est2.UseVisualStyleBackColor = True
+        '
+        'est1
+        '
+        Me.est1.AutoSize = True
+        Me.est1.Checked = True
+        Me.est1.Location = New System.Drawing.Point(321, 7)
+        Me.est1.Name = "est1"
+        Me.est1.Size = New System.Drawing.Size(14, 13)
+        Me.est1.TabIndex = 7
+        Me.est1.TabStop = True
+        Me.est1.UseVisualStyleBackColor = True
+        '
+        'Label203
+        '
+        Me.Label203.AutoSize = True
+        Me.Label203.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label203.Location = New System.Drawing.Point(11, 2)
+        Me.Label203.Name = "Label203"
+        Me.Label203.Size = New System.Drawing.Size(199, 26)
+        Me.Label203.TabIndex = 6
+        Me.Label203.Text = "EST (ตรวจหัวใจโดยการวิ่งสายพาน)"
+        '
         'GroupBox34
         '
         Me.GroupBox34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -1231,7 +1368,7 @@ Partial Class frmOilPackage
         Me.GroupBox34.Controls.Add(Me.chest1)
         Me.GroupBox34.Controls.Add(Me.Label45)
         Me.GroupBox34.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox34.Location = New System.Drawing.Point(14, 87)
+        Me.GroupBox34.Location = New System.Drawing.Point(14, 84)
         Me.GroupBox34.Name = "GroupBox34"
         Me.GroupBox34.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox34.TabIndex = 14
@@ -1240,7 +1377,7 @@ Partial Class frmOilPackage
         'chest3
         '
         Me.chest3.AutoSize = True
-        Me.chest3.Location = New System.Drawing.Point(508, 17)
+        Me.chest3.Location = New System.Drawing.Point(508, 11)
         Me.chest3.Name = "chest3"
         Me.chest3.Size = New System.Drawing.Size(14, 13)
         Me.chest3.TabIndex = 9
@@ -1249,7 +1386,7 @@ Partial Class frmOilPackage
         'chest2
         '
         Me.chest2.AutoSize = True
-        Me.chest2.Location = New System.Drawing.Point(419, 18)
+        Me.chest2.Location = New System.Drawing.Point(418, 12)
         Me.chest2.Name = "chest2"
         Me.chest2.Size = New System.Drawing.Size(14, 13)
         Me.chest2.TabIndex = 8
@@ -1259,7 +1396,7 @@ Partial Class frmOilPackage
         '
         Me.chest1.AutoSize = True
         Me.chest1.Checked = True
-        Me.chest1.Location = New System.Drawing.Point(321, 18)
+        Me.chest1.Location = New System.Drawing.Point(321, 14)
         Me.chest1.Name = "chest1"
         Me.chest1.Size = New System.Drawing.Size(14, 13)
         Me.chest1.TabIndex = 7
@@ -1270,7 +1407,7 @@ Partial Class frmOilPackage
         '
         Me.Label45.AutoSize = True
         Me.Label45.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label45.Location = New System.Drawing.Point(11, 17)
+        Me.Label45.Location = New System.Drawing.Point(11, 7)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(303, 26)
         Me.Label45.TabIndex = 6
@@ -1283,7 +1420,7 @@ Partial Class frmOilPackage
         Me.GroupBox3.Controls.Add(Me.ekg1)
         Me.GroupBox3.Controls.Add(Me.Label27)
         Me.GroupBox3.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 461)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 404)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox3.TabIndex = 21
@@ -1292,7 +1429,7 @@ Partial Class frmOilPackage
         'ekg3
         '
         Me.ekg3.AutoSize = True
-        Me.ekg3.Location = New System.Drawing.Point(508, 17)
+        Me.ekg3.Location = New System.Drawing.Point(508, 9)
         Me.ekg3.Name = "ekg3"
         Me.ekg3.Size = New System.Drawing.Size(14, 13)
         Me.ekg3.TabIndex = 9
@@ -1301,7 +1438,7 @@ Partial Class frmOilPackage
         'ekg2
         '
         Me.ekg2.AutoSize = True
-        Me.ekg2.Location = New System.Drawing.Point(419, 18)
+        Me.ekg2.Location = New System.Drawing.Point(419, 12)
         Me.ekg2.Name = "ekg2"
         Me.ekg2.Size = New System.Drawing.Size(14, 13)
         Me.ekg2.TabIndex = 8
@@ -1311,7 +1448,7 @@ Partial Class frmOilPackage
         '
         Me.ekg1.AutoSize = True
         Me.ekg1.Checked = True
-        Me.ekg1.Location = New System.Drawing.Point(321, 18)
+        Me.ekg1.Location = New System.Drawing.Point(321, 13)
         Me.ekg1.Name = "ekg1"
         Me.ekg1.Size = New System.Drawing.Size(14, 13)
         Me.ekg1.TabIndex = 7
@@ -1322,7 +1459,7 @@ Partial Class frmOilPackage
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label27.Location = New System.Drawing.Point(11, 17)
+        Me.Label27.Location = New System.Drawing.Point(11, 6)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(163, 26)
         Me.Label27.TabIndex = 6
@@ -1335,16 +1472,16 @@ Partial Class frmOilPackage
         Me.GroupBox2.Controls.Add(Me.lung1)
         Me.GroupBox2.Controls.Add(Me.Label26)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 415)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 377)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(546, 40)
+        Me.GroupBox2.Size = New System.Drawing.Size(546, 32)
         Me.GroupBox2.TabIndex = 20
         Me.GroupBox2.TabStop = False
         '
         'lung3
         '
         Me.lung3.AutoSize = True
-        Me.lung3.Location = New System.Drawing.Point(508, 17)
+        Me.lung3.Location = New System.Drawing.Point(508, 9)
         Me.lung3.Name = "lung3"
         Me.lung3.Size = New System.Drawing.Size(14, 13)
         Me.lung3.TabIndex = 9
@@ -1353,7 +1490,7 @@ Partial Class frmOilPackage
         'lung2
         '
         Me.lung2.AutoSize = True
-        Me.lung2.Location = New System.Drawing.Point(419, 18)
+        Me.lung2.Location = New System.Drawing.Point(419, 10)
         Me.lung2.Name = "lung2"
         Me.lung2.Size = New System.Drawing.Size(14, 13)
         Me.lung2.TabIndex = 8
@@ -1363,7 +1500,7 @@ Partial Class frmOilPackage
         '
         Me.lung1.AutoSize = True
         Me.lung1.Checked = True
-        Me.lung1.Location = New System.Drawing.Point(321, 18)
+        Me.lung1.Location = New System.Drawing.Point(321, 10)
         Me.lung1.Name = "lung1"
         Me.lung1.Size = New System.Drawing.Size(14, 13)
         Me.lung1.TabIndex = 7
@@ -1374,7 +1511,7 @@ Partial Class frmOilPackage
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label26.Location = New System.Drawing.Point(11, 17)
+        Me.Label26.Location = New System.Drawing.Point(11, 4)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(255, 26)
         Me.Label26.TabIndex = 6
@@ -1387,7 +1524,7 @@ Partial Class frmOilPackage
         Me.GroupBox29.Controls.Add(Me.audio1)
         Me.GroupBox29.Controls.Add(Me.Label36)
         Me.GroupBox29.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox29.Location = New System.Drawing.Point(12, 370)
+        Me.GroupBox29.Location = New System.Drawing.Point(12, 338)
         Me.GroupBox29.Name = "GroupBox29"
         Me.GroupBox29.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox29.TabIndex = 19
@@ -1426,7 +1563,7 @@ Partial Class frmOilPackage
         '
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label36.Location = New System.Drawing.Point(11, 17)
+        Me.Label36.Location = New System.Drawing.Point(11, 13)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(205, 26)
         Me.Label36.TabIndex = 6
@@ -1439,7 +1576,7 @@ Partial Class frmOilPackage
         Me.GroupBox28.Controls.Add(Me.skin1)
         Me.GroupBox28.Controls.Add(Me.Label35)
         Me.GroupBox28.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox28.Location = New System.Drawing.Point(12, 327)
+        Me.GroupBox28.Location = New System.Drawing.Point(12, 301)
         Me.GroupBox28.Name = "GroupBox28"
         Me.GroupBox28.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox28.TabIndex = 18
@@ -1478,7 +1615,7 @@ Partial Class frmOilPackage
         '
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label35.Location = New System.Drawing.Point(11, 17)
+        Me.Label35.Location = New System.Drawing.Point(11, 15)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(92, 26)
         Me.Label35.TabIndex = 6
@@ -1491,7 +1628,7 @@ Partial Class frmOilPackage
         Me.tab1_result_leftright.Controls.Add(Me.spine1)
         Me.tab1_result_leftright.Controls.Add(Me.Label34)
         Me.tab1_result_leftright.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.tab1_result_leftright.Location = New System.Drawing.Point(12, 283)
+        Me.tab1_result_leftright.Location = New System.Drawing.Point(12, 258)
         Me.tab1_result_leftright.Name = "tab1_result_leftright"
         Me.tab1_result_leftright.Size = New System.Drawing.Size(546, 40)
         Me.tab1_result_leftright.TabIndex = 17
@@ -1543,7 +1680,7 @@ Partial Class frmOilPackage
         Me.GroupBox26.Controls.Add(Me.ex1)
         Me.GroupBox26.Controls.Add(Me.Label33)
         Me.GroupBox26.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox26.Location = New System.Drawing.Point(12, 244)
+        Me.GroupBox26.Location = New System.Drawing.Point(12, 220)
         Me.GroupBox26.Name = "GroupBox26"
         Me.GroupBox26.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox26.TabIndex = 16
@@ -1596,7 +1733,7 @@ Partial Class frmOilPackage
         Me.GroupBox25.Controls.Add(Me.Label32)
         Me.GroupBox25.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GroupBox25.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.GroupBox25.Location = New System.Drawing.Point(12, 203)
+        Me.GroupBox25.Location = New System.Drawing.Point(12, 182)
         Me.GroupBox25.Name = "GroupBox25"
         Me.GroupBox25.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox25.TabIndex = 15
@@ -1635,7 +1772,7 @@ Partial Class frmOilPackage
         '
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label32.Location = New System.Drawing.Point(11, 17)
+        Me.Label32.Location = New System.Drawing.Point(11, 11)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(302, 26)
         Me.Label32.TabIndex = 6
@@ -1648,7 +1785,7 @@ Partial Class frmOilPackage
         Me.GroupBox24.Controls.Add(Me.lymp1)
         Me.GroupBox24.Controls.Add(Me.Label31)
         Me.GroupBox24.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox24.Location = New System.Drawing.Point(12, 163)
+        Me.GroupBox24.Location = New System.Drawing.Point(12, 148)
         Me.GroupBox24.Name = "GroupBox24"
         Me.GroupBox24.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox24.TabIndex = 14
@@ -1687,7 +1824,7 @@ Partial Class frmOilPackage
         '
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label31.Location = New System.Drawing.Point(11, 17)
+        Me.Label31.Location = New System.Drawing.Point(11, 12)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(168, 26)
         Me.Label31.TabIndex = 245
@@ -1701,7 +1838,7 @@ Partial Class frmOilPackage
         Me.GroupBox23.Controls.Add(Me.ab1)
         Me.GroupBox23.Controls.Add(Me.Label30)
         Me.GroupBox23.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox23.Location = New System.Drawing.Point(12, 123)
+        Me.GroupBox23.Location = New System.Drawing.Point(12, 112)
         Me.GroupBox23.Name = "GroupBox23"
         Me.GroupBox23.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox23.TabIndex = 13
@@ -1740,7 +1877,7 @@ Partial Class frmOilPackage
         '
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label30.Location = New System.Drawing.Point(11, 17)
+        Me.Label30.Location = New System.Drawing.Point(11, 13)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(294, 26)
         Me.Label30.TabIndex = 6
@@ -5203,8 +5340,8 @@ Partial Class frmOilPackage
         Me.RadioButton3.Size = New System.Drawing.Size(631, 30)
         Me.RadioButton3.TabIndex = 2
         Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Temporary unfit for offshore employment in his / her position so please contact t" & _
-            "he doctor as soon as possible"
+        Me.RadioButton3.Text = "Temporary unfit for offshore employment in his / her position so please contact t" &
+    "he doctor as soon as possible"
         Me.RadioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
@@ -5229,13 +5366,15 @@ Partial Class frmOilPackage
         Me.RadioButton1.Size = New System.Drawing.Size(842, 30)
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Fit for offshore employment in his / her position. This person is free from commu" & _
-            "nicable disease and is considered mecially fit for the work intended."
+        Me.RadioButton1.Text = "Fit for offshore employment in his / her position. This person is free from commu" &
+    "nicable disease and is considered mecially fit for the work intended."
         Me.RadioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'TabPageEX7
         '
+        Me.TabPageEX7.Controls.Add(Me.Label205)
+        Me.TabPageEX7.Controls.Add(Me.txtCertExp)
         Me.TabPageEX7.Controls.Add(Me.RichTextBox1)
         Me.TabPageEX7.Controls.Add(Me.CheckBox1)
         Me.TabPageEX7.Controls.Add(Me.txt_other_fit)
@@ -5415,9 +5554,9 @@ Partial Class frmOilPackage
         'Button14
         '
         Me.Button14.BackgroundImage = Global.ryh_system.My.Resources.Resources.Printer_and_Fax
-        Me.Button14.Location = New System.Drawing.Point(962, 50)
+        Me.Button14.Location = New System.Drawing.Point(962, 45)
         Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(66, 60)
+        Me.Button14.Size = New System.Drawing.Size(66, 65)
         Me.Button14.TabIndex = 317
         Me.Button14.UseVisualStyleBackColor = True
         '
@@ -5472,9 +5611,9 @@ Partial Class frmOilPackage
         '
         Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX1.Location = New System.Drawing.Point(1105, 50)
+        Me.ButtonX1.Location = New System.Drawing.Point(1108, 3)
         Me.ButtonX1.Name = "ButtonX1"
-        Me.ButtonX1.Size = New System.Drawing.Size(68, 60)
+        Me.ButtonX1.Size = New System.Drawing.Size(68, 33)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014
         Me.ButtonX1.TabIndex = 323
         Me.ButtonX1.Text = "EXTRA"
@@ -5483,9 +5622,9 @@ Partial Class frmOilPackage
         '
         Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX2.Location = New System.Drawing.Point(1032, 50)
+        Me.ButtonX2.Location = New System.Drawing.Point(1034, 3)
         Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(70, 60)
+        Me.ButtonX2.Size = New System.Drawing.Size(68, 33)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014
         Me.ButtonX2.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ไทย, Me.ButtonItem4})
         Me.ButtonX2.Symbol = ""
@@ -5557,21 +5696,31 @@ Partial Class frmOilPackage
         Me.CheckBox8.Text = "แสดงที่อยู่"
         Me.CheckBox8.UseVisualStyleBackColor = False
         '
-        'blood_pressure_result
+        'Button2
         '
-        Me.blood_pressure_result.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.blood_pressure_result.Location = New System.Drawing.Point(380, 108)
-        Me.blood_pressure_result.Name = "blood_pressure_result"
-        Me.blood_pressure_result.Size = New System.Drawing.Size(193, 22)
-        Me.blood_pressure_result.TabIndex = 282
+        Me.Button2.BackgroundImage = Global.ryh_system.My.Resources.Resources.Printer_and_Fax
+        Me.Button2.Location = New System.Drawing.Point(1036, 45)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(66, 65)
+        Me.Button2.TabIndex = 328
+        Me.Button2.UseVisualStyleBackColor = True
         '
-        'eye_result
+        'txtCertExp
         '
-        Me.eye_result.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.eye_result.Location = New System.Drawing.Point(15, 155)
-        Me.eye_result.Name = "eye_result"
-        Me.eye_result.Size = New System.Drawing.Size(552, 22)
-        Me.eye_result.TabIndex = 283
+        Me.txtCertExp.Location = New System.Drawing.Point(946, 233)
+        Me.txtCertExp.Name = "txtCertExp"
+        Me.txtCertExp.Size = New System.Drawing.Size(171, 34)
+        Me.txtCertExp.TabIndex = 408
+        '
+        'Label205
+        '
+        Me.Label205.AutoSize = True
+        Me.Label205.Font = New System.Drawing.Font("Cordia New", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label205.Location = New System.Drawing.Point(830, 233)
+        Me.Label205.Name = "Label205"
+        Me.Label205.Size = New System.Drawing.Size(116, 34)
+        Me.Label205.TabIndex = 409
+        Me.Label205.Text = "Cert. Exp Date"
         '
         'frmOilPackage
         '
@@ -5581,6 +5730,7 @@ Partial Class frmOilPackage
         Me.BackgroundImage = Global.ryh_system.My.Resources.Resources.main
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1176, 722)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.CheckBox8)
         Me.Controls.Add(Me.dateconfirm)
         Me.Controls.Add(Me.Label201)
@@ -5631,6 +5781,10 @@ Partial Class frmOilPackage
         Me.GroupBox33.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox43.ResumeLayout(False)
+        Me.GroupBox43.PerformLayout()
+        Me.GroupBox27.ResumeLayout(False)
+        Me.GroupBox27.PerformLayout()
         Me.GroupBox34.ResumeLayout(False)
         Me.GroupBox34.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -6188,4 +6342,17 @@ Partial Class frmOilPackage
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents eye_result As System.Windows.Forms.TextBox
     Friend WithEvents blood_pressure_result As System.Windows.Forms.TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents GroupBox27 As GroupBox
+    Friend WithEvents est3 As RadioButton
+    Friend WithEvents est2 As RadioButton
+    Friend WithEvents est1 As RadioButton
+    Friend WithEvents Label203 As Label
+    Friend WithEvents GroupBox43 As GroupBox
+    Friend WithEvents ust3 As RadioButton
+    Friend WithEvents ust2 As RadioButton
+    Friend WithEvents ust1 As RadioButton
+    Friend WithEvents Label204 As Label
+    Friend WithEvents Label205 As Label
+    Friend WithEvents txtCertExp As TextBox
 End Class

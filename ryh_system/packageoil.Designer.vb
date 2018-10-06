@@ -83,6 +83,16 @@ Partial Class packageoil
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox44 = New System.Windows.Forms.GroupBox()
+        Me.ust3 = New System.Windows.Forms.RadioButton()
+        Me.ust2 = New System.Windows.Forms.RadioButton()
+        Me.ust1 = New System.Windows.Forms.RadioButton()
+        Me.Label204 = New System.Windows.Forms.Label()
+        Me.GroupBox43 = New System.Windows.Forms.GroupBox()
+        Me.est3 = New System.Windows.Forms.RadioButton()
+        Me.est2 = New System.Windows.Forms.RadioButton()
+        Me.est1 = New System.Windows.Forms.RadioButton()
+        Me.Label203 = New System.Windows.Forms.Label()
         Me.GroupBox34 = New System.Windows.Forms.GroupBox()
         Me.chest3 = New System.Windows.Forms.RadioButton()
         Me.chest2 = New System.Windows.Forms.RadioButton()
@@ -485,6 +495,8 @@ Partial Class packageoil
         Me.Label201 = New System.Windows.Forms.Label()
         Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label205 = New System.Windows.Forms.Label()
+        Me.txtCertExp = New System.Windows.Forms.TextBox()
         Me.TabControlEX1.SuspendLayout()
         Me.TabPageEX1.SuspendLayout()
         Me.GroupBox42.SuspendLayout()
@@ -493,6 +505,8 @@ Partial Class packageoil
         Me.GroupBox32.SuspendLayout()
         Me.GroupBox33.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox44.SuspendLayout()
+        Me.GroupBox43.SuspendLayout()
         Me.GroupBox34.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -559,7 +573,7 @@ Partial Class packageoil
         Me.TabControlEX1.Location = New System.Drawing.Point(2, 125)
         Me.TabControlEX1.Name = "TabControlEX1"
         Me.TabControlEX1.Padding = New System.Drawing.Point(3, 3)
-        Me.TabControlEX1.SelectedIndex = 0
+        Me.TabControlEX1.SelectedIndex = 7
         Me.TabControlEX1.SelectedTabColor = System.Drawing.Color.Gainsboro
         Me.TabControlEX1.Size = New System.Drawing.Size(1160, 545)
         Me.TabControlEX1.TabIndex = 335
@@ -1194,6 +1208,8 @@ Partial Class packageoil
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox44)
+        Me.GroupBox1.Controls.Add(Me.GroupBox43)
         Me.GroupBox1.Controls.Add(Me.GroupBox34)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
@@ -1218,6 +1234,114 @@ Partial Class packageoil
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "การตรวจร่างกาย (Physical Examination)"
         '
+        'GroupBox44
+        '
+        Me.GroupBox44.Controls.Add(Me.ust3)
+        Me.GroupBox44.Controls.Add(Me.ust2)
+        Me.GroupBox44.Controls.Add(Me.ust1)
+        Me.GroupBox44.Controls.Add(Me.Label204)
+        Me.GroupBox44.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.GroupBox44.Location = New System.Drawing.Point(8, 442)
+        Me.GroupBox44.Name = "GroupBox44"
+        Me.GroupBox44.Size = New System.Drawing.Size(546, 40)
+        Me.GroupBox44.TabIndex = 23
+        Me.GroupBox44.TabStop = False
+        '
+        'ust3
+        '
+        Me.ust3.AutoSize = True
+        Me.ust3.Checked = True
+        Me.ust3.Location = New System.Drawing.Point(508, 17)
+        Me.ust3.Name = "ust3"
+        Me.ust3.Size = New System.Drawing.Size(14, 13)
+        Me.ust3.TabIndex = 9
+        Me.ust3.TabStop = True
+        Me.ust3.UseVisualStyleBackColor = True
+        '
+        'ust2
+        '
+        Me.ust2.AutoSize = True
+        Me.ust2.Location = New System.Drawing.Point(419, 17)
+        Me.ust2.Name = "ust2"
+        Me.ust2.Size = New System.Drawing.Size(14, 13)
+        Me.ust2.TabIndex = 8
+        Me.ust2.TabStop = True
+        Me.ust2.UseVisualStyleBackColor = True
+        '
+        'ust1
+        '
+        Me.ust1.AutoSize = True
+        Me.ust1.Location = New System.Drawing.Point(321, 17)
+        Me.ust1.Name = "ust1"
+        Me.ust1.Size = New System.Drawing.Size(14, 13)
+        Me.ust1.TabIndex = 7
+        Me.ust1.TabStop = True
+        Me.ust1.UseVisualStyleBackColor = True
+        '
+        'Label204
+        '
+        Me.Label204.AutoSize = True
+        Me.Label204.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label204.Location = New System.Drawing.Point(16, 7)
+        Me.Label204.Name = "Label204"
+        Me.Label204.Size = New System.Drawing.Size(276, 26)
+        Me.Label204.TabIndex = 6
+        Me.Label204.Text = "ultrasound whole abdomen(อัลตร้าซาวด์ช่องท้อง )"
+        '
+        'GroupBox43
+        '
+        Me.GroupBox43.Controls.Add(Me.est3)
+        Me.GroupBox43.Controls.Add(Me.est2)
+        Me.GroupBox43.Controls.Add(Me.est1)
+        Me.GroupBox43.Controls.Add(Me.Label203)
+        Me.GroupBox43.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.GroupBox43.Location = New System.Drawing.Point(10, 406)
+        Me.GroupBox43.Name = "GroupBox43"
+        Me.GroupBox43.Size = New System.Drawing.Size(546, 40)
+        Me.GroupBox43.TabIndex = 22
+        Me.GroupBox43.TabStop = False
+        '
+        'est3
+        '
+        Me.est3.AutoSize = True
+        Me.est3.Checked = True
+        Me.est3.Location = New System.Drawing.Point(508, 17)
+        Me.est3.Name = "est3"
+        Me.est3.Size = New System.Drawing.Size(14, 13)
+        Me.est3.TabIndex = 9
+        Me.est3.TabStop = True
+        Me.est3.UseVisualStyleBackColor = True
+        '
+        'est2
+        '
+        Me.est2.AutoSize = True
+        Me.est2.Location = New System.Drawing.Point(419, 17)
+        Me.est2.Name = "est2"
+        Me.est2.Size = New System.Drawing.Size(14, 13)
+        Me.est2.TabIndex = 8
+        Me.est2.TabStop = True
+        Me.est2.UseVisualStyleBackColor = True
+        '
+        'est1
+        '
+        Me.est1.AutoSize = True
+        Me.est1.Location = New System.Drawing.Point(321, 17)
+        Me.est1.Name = "est1"
+        Me.est1.Size = New System.Drawing.Size(14, 13)
+        Me.est1.TabIndex = 7
+        Me.est1.TabStop = True
+        Me.est1.UseVisualStyleBackColor = True
+        '
+        'Label203
+        '
+        Me.Label203.AutoSize = True
+        Me.Label203.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label203.Location = New System.Drawing.Point(16, 7)
+        Me.Label203.Name = "Label203"
+        Me.Label203.Size = New System.Drawing.Size(180, 26)
+        Me.Label203.TabIndex = 6
+        Me.Label203.Text = "EST (ตรวจหัวใจโดยวิ่งสายพาน)"
+        '
         'GroupBox34
         '
         Me.GroupBox34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -1226,7 +1350,7 @@ Partial Class packageoil
         Me.GroupBox34.Controls.Add(Me.chest1)
         Me.GroupBox34.Controls.Add(Me.Label45)
         Me.GroupBox34.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox34.Location = New System.Drawing.Point(14, 87)
+        Me.GroupBox34.Location = New System.Drawing.Point(12, 78)
         Me.GroupBox34.Name = "GroupBox34"
         Me.GroupBox34.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox34.TabIndex = 14
@@ -1265,7 +1389,7 @@ Partial Class packageoil
         '
         Me.Label45.AutoSize = True
         Me.Label45.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label45.Location = New System.Drawing.Point(11, 17)
+        Me.Label45.Location = New System.Drawing.Point(9, 10)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(303, 26)
         Me.Label45.TabIndex = 6
@@ -1278,7 +1402,7 @@ Partial Class packageoil
         Me.GroupBox3.Controls.Add(Me.ekg1)
         Me.GroupBox3.Controls.Add(Me.Label27)
         Me.GroupBox3.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 461)
+        Me.GroupBox3.Location = New System.Drawing.Point(10, 369)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox3.TabIndex = 21
@@ -1308,7 +1432,7 @@ Partial Class packageoil
         'ekg1
         '
         Me.ekg1.AutoSize = True
-        Me.ekg1.Location = New System.Drawing.Point(321, 18)
+        Me.ekg1.Location = New System.Drawing.Point(321, 17)
         Me.ekg1.Name = "ekg1"
         Me.ekg1.Size = New System.Drawing.Size(14, 13)
         Me.ekg1.TabIndex = 7
@@ -1319,7 +1443,7 @@ Partial Class packageoil
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label27.Location = New System.Drawing.Point(11, 17)
+        Me.Label27.Location = New System.Drawing.Point(16, 7)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(163, 26)
         Me.Label27.TabIndex = 6
@@ -1332,7 +1456,7 @@ Partial Class packageoil
         Me.GroupBox2.Controls.Add(Me.lung1)
         Me.GroupBox2.Controls.Add(Me.Label26)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 415)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 344)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox2.TabIndex = 20
@@ -1342,7 +1466,7 @@ Partial Class packageoil
         '
         Me.lung3.AutoSize = True
         Me.lung3.Checked = True
-        Me.lung3.Location = New System.Drawing.Point(508, 17)
+        Me.lung3.Location = New System.Drawing.Point(508, 5)
         Me.lung3.Name = "lung3"
         Me.lung3.Size = New System.Drawing.Size(14, 13)
         Me.lung3.TabIndex = 9
@@ -1352,7 +1476,7 @@ Partial Class packageoil
         'lung2
         '
         Me.lung2.AutoSize = True
-        Me.lung2.Location = New System.Drawing.Point(419, 18)
+        Me.lung2.Location = New System.Drawing.Point(419, 6)
         Me.lung2.Name = "lung2"
         Me.lung2.Size = New System.Drawing.Size(14, 13)
         Me.lung2.TabIndex = 8
@@ -1361,7 +1485,7 @@ Partial Class packageoil
         'lung1
         '
         Me.lung1.AutoSize = True
-        Me.lung1.Location = New System.Drawing.Point(321, 18)
+        Me.lung1.Location = New System.Drawing.Point(321, 8)
         Me.lung1.Name = "lung1"
         Me.lung1.Size = New System.Drawing.Size(14, 13)
         Me.lung1.TabIndex = 7
@@ -1371,7 +1495,7 @@ Partial Class packageoil
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label26.Location = New System.Drawing.Point(11, 17)
+        Me.Label26.Location = New System.Drawing.Point(11, 4)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(255, 26)
         Me.Label26.TabIndex = 6
@@ -1384,7 +1508,7 @@ Partial Class packageoil
         Me.GroupBox29.Controls.Add(Me.audio1)
         Me.GroupBox29.Controls.Add(Me.Label36)
         Me.GroupBox29.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox29.Location = New System.Drawing.Point(12, 370)
+        Me.GroupBox29.Location = New System.Drawing.Point(12, 310)
         Me.GroupBox29.Name = "GroupBox29"
         Me.GroupBox29.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox29.TabIndex = 19
@@ -1394,7 +1518,7 @@ Partial Class packageoil
         '
         Me.audio3.AutoSize = True
         Me.audio3.Checked = True
-        Me.audio3.Location = New System.Drawing.Point(508, 17)
+        Me.audio3.Location = New System.Drawing.Point(508, 8)
         Me.audio3.Name = "audio3"
         Me.audio3.Size = New System.Drawing.Size(14, 13)
         Me.audio3.TabIndex = 9
@@ -1404,7 +1528,7 @@ Partial Class packageoil
         'audio2
         '
         Me.audio2.AutoSize = True
-        Me.audio2.Location = New System.Drawing.Point(419, 18)
+        Me.audio2.Location = New System.Drawing.Point(419, 8)
         Me.audio2.Name = "audio2"
         Me.audio2.Size = New System.Drawing.Size(14, 13)
         Me.audio2.TabIndex = 8
@@ -1413,7 +1537,7 @@ Partial Class packageoil
         'audio1
         '
         Me.audio1.AutoSize = True
-        Me.audio1.Location = New System.Drawing.Point(321, 18)
+        Me.audio1.Location = New System.Drawing.Point(321, 10)
         Me.audio1.Name = "audio1"
         Me.audio1.Size = New System.Drawing.Size(14, 13)
         Me.audio1.TabIndex = 7
@@ -1423,7 +1547,7 @@ Partial Class packageoil
         '
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label36.Location = New System.Drawing.Point(11, 17)
+        Me.Label36.Location = New System.Drawing.Point(11, 7)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(205, 26)
         Me.Label36.TabIndex = 6
@@ -1436,7 +1560,7 @@ Partial Class packageoil
         Me.GroupBox28.Controls.Add(Me.skin1)
         Me.GroupBox28.Controls.Add(Me.Label35)
         Me.GroupBox28.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox28.Location = New System.Drawing.Point(12, 327)
+        Me.GroupBox28.Location = New System.Drawing.Point(12, 278)
         Me.GroupBox28.Name = "GroupBox28"
         Me.GroupBox28.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox28.TabIndex = 18
@@ -1446,7 +1570,7 @@ Partial Class packageoil
         '
         Me.skin3.AutoSize = True
         Me.skin3.Checked = True
-        Me.skin3.Location = New System.Drawing.Point(508, 17)
+        Me.skin3.Location = New System.Drawing.Point(508, 7)
         Me.skin3.Name = "skin3"
         Me.skin3.Size = New System.Drawing.Size(14, 13)
         Me.skin3.TabIndex = 9
@@ -1456,7 +1580,7 @@ Partial Class packageoil
         'skin2
         '
         Me.skin2.AutoSize = True
-        Me.skin2.Location = New System.Drawing.Point(419, 18)
+        Me.skin2.Location = New System.Drawing.Point(419, 8)
         Me.skin2.Name = "skin2"
         Me.skin2.Size = New System.Drawing.Size(14, 13)
         Me.skin2.TabIndex = 8
@@ -1465,7 +1589,7 @@ Partial Class packageoil
         'skin1
         '
         Me.skin1.AutoSize = True
-        Me.skin1.Location = New System.Drawing.Point(321, 18)
+        Me.skin1.Location = New System.Drawing.Point(321, 9)
         Me.skin1.Name = "skin1"
         Me.skin1.Size = New System.Drawing.Size(14, 13)
         Me.skin1.TabIndex = 7
@@ -1475,7 +1599,7 @@ Partial Class packageoil
         '
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label35.Location = New System.Drawing.Point(11, 17)
+        Me.Label35.Location = New System.Drawing.Point(11, 7)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(92, 26)
         Me.Label35.TabIndex = 6
@@ -1488,7 +1612,7 @@ Partial Class packageoil
         Me.GroupBox27.Controls.Add(Me.spine1)
         Me.GroupBox27.Controls.Add(Me.Label34)
         Me.GroupBox27.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox27.Location = New System.Drawing.Point(12, 283)
+        Me.GroupBox27.Location = New System.Drawing.Point(12, 249)
         Me.GroupBox27.Name = "GroupBox27"
         Me.GroupBox27.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox27.TabIndex = 17
@@ -1498,7 +1622,7 @@ Partial Class packageoil
         '
         Me.spine3.AutoSize = True
         Me.spine3.Checked = True
-        Me.spine3.Location = New System.Drawing.Point(508, 17)
+        Me.spine3.Location = New System.Drawing.Point(508, 8)
         Me.spine3.Name = "spine3"
         Me.spine3.Size = New System.Drawing.Size(14, 13)
         Me.spine3.TabIndex = 9
@@ -1508,7 +1632,7 @@ Partial Class packageoil
         'spine2
         '
         Me.spine2.AutoSize = True
-        Me.spine2.Location = New System.Drawing.Point(419, 18)
+        Me.spine2.Location = New System.Drawing.Point(419, 10)
         Me.spine2.Name = "spine2"
         Me.spine2.Size = New System.Drawing.Size(14, 13)
         Me.spine2.TabIndex = 8
@@ -1517,7 +1641,7 @@ Partial Class packageoil
         'spine1
         '
         Me.spine1.AutoSize = True
-        Me.spine1.Location = New System.Drawing.Point(321, 18)
+        Me.spine1.Location = New System.Drawing.Point(321, 12)
         Me.spine1.Name = "spine1"
         Me.spine1.Size = New System.Drawing.Size(14, 13)
         Me.spine1.TabIndex = 7
@@ -1527,7 +1651,7 @@ Partial Class packageoil
         '
         Me.Label34.AutoSize = True
         Me.Label34.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label34.Location = New System.Drawing.Point(11, 15)
+        Me.Label34.Location = New System.Drawing.Point(11, 5)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(316, 26)
         Me.Label34.TabIndex = 6
@@ -1540,7 +1664,7 @@ Partial Class packageoil
         Me.GroupBox26.Controls.Add(Me.ex1)
         Me.GroupBox26.Controls.Add(Me.Label33)
         Me.GroupBox26.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox26.Location = New System.Drawing.Point(12, 244)
+        Me.GroupBox26.Location = New System.Drawing.Point(12, 218)
         Me.GroupBox26.Name = "GroupBox26"
         Me.GroupBox26.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox26.TabIndex = 16
@@ -1550,7 +1674,7 @@ Partial Class packageoil
         '
         Me.ex3.AutoSize = True
         Me.ex3.Checked = True
-        Me.ex3.Location = New System.Drawing.Point(508, 17)
+        Me.ex3.Location = New System.Drawing.Point(508, 8)
         Me.ex3.Name = "ex3"
         Me.ex3.Size = New System.Drawing.Size(14, 13)
         Me.ex3.TabIndex = 9
@@ -1560,7 +1684,7 @@ Partial Class packageoil
         'ex2
         '
         Me.ex2.AutoSize = True
-        Me.ex2.Location = New System.Drawing.Point(419, 18)
+        Me.ex2.Location = New System.Drawing.Point(419, 11)
         Me.ex2.Name = "ex2"
         Me.ex2.Size = New System.Drawing.Size(14, 13)
         Me.ex2.TabIndex = 8
@@ -1569,7 +1693,7 @@ Partial Class packageoil
         'ex1
         '
         Me.ex1.AutoSize = True
-        Me.ex1.Location = New System.Drawing.Point(321, 18)
+        Me.ex1.Location = New System.Drawing.Point(321, 12)
         Me.ex1.Name = "ex1"
         Me.ex1.Size = New System.Drawing.Size(14, 13)
         Me.ex1.TabIndex = 7
@@ -1579,7 +1703,7 @@ Partial Class packageoil
         '
         Me.Label33.AutoSize = True
         Me.Label33.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label33.Location = New System.Drawing.Point(11, 17)
+        Me.Label33.Location = New System.Drawing.Point(11, 7)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(123, 26)
         Me.Label33.TabIndex = 6
@@ -1593,7 +1717,7 @@ Partial Class packageoil
         Me.GroupBox25.Controls.Add(Me.Label32)
         Me.GroupBox25.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GroupBox25.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.GroupBox25.Location = New System.Drawing.Point(12, 203)
+        Me.GroupBox25.Location = New System.Drawing.Point(12, 183)
         Me.GroupBox25.Name = "GroupBox25"
         Me.GroupBox25.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox25.TabIndex = 15
@@ -1603,7 +1727,7 @@ Partial Class packageoil
         '
         Me.gu3.AutoSize = True
         Me.gu3.Checked = True
-        Me.gu3.Location = New System.Drawing.Point(508, 17)
+        Me.gu3.Location = New System.Drawing.Point(509, 10)
         Me.gu3.Name = "gu3"
         Me.gu3.Size = New System.Drawing.Size(14, 13)
         Me.gu3.TabIndex = 9
@@ -1613,7 +1737,7 @@ Partial Class packageoil
         'gu2
         '
         Me.gu2.AutoSize = True
-        Me.gu2.Location = New System.Drawing.Point(419, 18)
+        Me.gu2.Location = New System.Drawing.Point(419, 13)
         Me.gu2.Name = "gu2"
         Me.gu2.Size = New System.Drawing.Size(14, 13)
         Me.gu2.TabIndex = 8
@@ -1622,7 +1746,7 @@ Partial Class packageoil
         'gu1
         '
         Me.gu1.AutoSize = True
-        Me.gu1.Location = New System.Drawing.Point(321, 18)
+        Me.gu1.Location = New System.Drawing.Point(321, 16)
         Me.gu1.Name = "gu1"
         Me.gu1.Size = New System.Drawing.Size(14, 13)
         Me.gu1.TabIndex = 7
@@ -1632,7 +1756,7 @@ Partial Class packageoil
         '
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label32.Location = New System.Drawing.Point(11, 17)
+        Me.Label32.Location = New System.Drawing.Point(11, 7)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(302, 26)
         Me.Label32.TabIndex = 6
@@ -1645,7 +1769,7 @@ Partial Class packageoil
         Me.GroupBox24.Controls.Add(Me.lymp1)
         Me.GroupBox24.Controls.Add(Me.Label31)
         Me.GroupBox24.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox24.Location = New System.Drawing.Point(12, 163)
+        Me.GroupBox24.Location = New System.Drawing.Point(12, 148)
         Me.GroupBox24.Name = "GroupBox24"
         Me.GroupBox24.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox24.TabIndex = 14
@@ -1684,7 +1808,7 @@ Partial Class packageoil
         '
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label31.Location = New System.Drawing.Point(11, 17)
+        Me.Label31.Location = New System.Drawing.Point(11, 8)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(168, 26)
         Me.Label31.TabIndex = 6
@@ -1698,7 +1822,7 @@ Partial Class packageoil
         Me.GroupBox23.Controls.Add(Me.ab1)
         Me.GroupBox23.Controls.Add(Me.Label30)
         Me.GroupBox23.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox23.Location = New System.Drawing.Point(12, 123)
+        Me.GroupBox23.Location = New System.Drawing.Point(12, 111)
         Me.GroupBox23.Name = "GroupBox23"
         Me.GroupBox23.Size = New System.Drawing.Size(546, 40)
         Me.GroupBox23.TabIndex = 13
@@ -1737,7 +1861,7 @@ Partial Class packageoil
         '
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label30.Location = New System.Drawing.Point(11, 17)
+        Me.Label30.Location = New System.Drawing.Point(11, 10)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(294, 26)
         Me.Label30.TabIndex = 6
@@ -1750,9 +1874,9 @@ Partial Class packageoil
         Me.GroupBox22.Controls.Add(Me.vas1)
         Me.GroupBox22.Controls.Add(Me.Label29)
         Me.GroupBox22.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox22.Location = New System.Drawing.Point(12, 45)
+        Me.GroupBox22.Location = New System.Drawing.Point(12, 44)
         Me.GroupBox22.Name = "GroupBox22"
-        Me.GroupBox22.Size = New System.Drawing.Size(546, 40)
+        Me.GroupBox22.Size = New System.Drawing.Size(546, 34)
         Me.GroupBox22.TabIndex = 12
         Me.GroupBox22.TabStop = False
         '
@@ -1760,7 +1884,7 @@ Partial Class packageoil
         '
         Me.vas3.AutoSize = True
         Me.vas3.Checked = True
-        Me.vas3.Location = New System.Drawing.Point(508, 17)
+        Me.vas3.Location = New System.Drawing.Point(508, 8)
         Me.vas3.Name = "vas3"
         Me.vas3.Size = New System.Drawing.Size(14, 13)
         Me.vas3.TabIndex = 9
@@ -1770,7 +1894,7 @@ Partial Class packageoil
         'vas2
         '
         Me.vas2.AutoSize = True
-        Me.vas2.Location = New System.Drawing.Point(419, 18)
+        Me.vas2.Location = New System.Drawing.Point(419, 11)
         Me.vas2.Name = "vas2"
         Me.vas2.Size = New System.Drawing.Size(14, 13)
         Me.vas2.TabIndex = 8
@@ -1779,7 +1903,7 @@ Partial Class packageoil
         'vas1
         '
         Me.vas1.AutoSize = True
-        Me.vas1.Location = New System.Drawing.Point(321, 18)
+        Me.vas1.Location = New System.Drawing.Point(321, 12)
         Me.vas1.Name = "vas1"
         Me.vas1.Size = New System.Drawing.Size(14, 13)
         Me.vas1.TabIndex = 7
@@ -1789,7 +1913,7 @@ Partial Class packageoil
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label29.Location = New System.Drawing.Point(11, 17)
+        Me.Label29.Location = New System.Drawing.Point(13, 4)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(159, 26)
         Me.Label29.TabIndex = 6
@@ -1819,7 +1943,7 @@ Partial Class packageoil
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label23.Location = New System.Drawing.Point(483, 10)
+        Me.Label23.Location = New System.Drawing.Point(486, 1)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(66, 26)
         Me.Label23.TabIndex = 2
@@ -1829,7 +1953,7 @@ Partial Class packageoil
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label21.Location = New System.Drawing.Point(394, 10)
+        Me.Label21.Location = New System.Drawing.Point(394, 1)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(65, 26)
         Me.Label21.TabIndex = 1
@@ -1839,7 +1963,7 @@ Partial Class packageoil
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label18.Location = New System.Drawing.Point(307, 10)
+        Me.Label18.Location = New System.Drawing.Point(311, 1)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(51, 26)
         Me.Label18.TabIndex = 0
@@ -4923,7 +5047,7 @@ Partial Class packageoil
         Me.GroupBox41.Font = New System.Drawing.Font("Cordia New", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox41.Location = New System.Drawing.Point(12, 18)
         Me.GroupBox41.Name = "GroupBox41"
-        Me.GroupBox41.Size = New System.Drawing.Size(1051, 305)
+        Me.GroupBox41.Size = New System.Drawing.Size(1051, 346)
         Me.GroupBox41.TabIndex = 391
         Me.GroupBox41.TabStop = False
         '
@@ -5029,6 +5153,8 @@ Partial Class packageoil
         'TabPageEX7
         '
         Me.TabPageEX7.BackColor = System.Drawing.Color.Gainsboro
+        Me.TabPageEX7.Controls.Add(Me.Label205)
+        Me.TabPageEX7.Controls.Add(Me.txtCertExp)
         Me.TabPageEX7.Controls.Add(Me.RichTextBox1)
         Me.TabPageEX7.Controls.Add(Me.CheckBox1)
         Me.TabPageEX7.Controls.Add(Me.txt_other_fit)
@@ -5512,6 +5638,23 @@ Partial Class packageoil
         Me.Button2.TabIndex = 345
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Label205
+        '
+        Me.Label205.AutoSize = True
+        Me.Label205.Font = New System.Drawing.Font("Cordia New", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label205.Location = New System.Drawing.Point(838, 237)
+        Me.Label205.Name = "Label205"
+        Me.Label205.Size = New System.Drawing.Size(116, 34)
+        Me.Label205.TabIndex = 411
+        Me.Label205.Text = "Cert. Exp Date"
+        '
+        'txtCertExp
+        '
+        Me.txtCertExp.Location = New System.Drawing.Point(954, 237)
+        Me.txtCertExp.Name = "txtCertExp"
+        Me.txtCertExp.Size = New System.Drawing.Size(171, 30)
+        Me.txtCertExp.TabIndex = 410
+        '
         'packageoil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -5565,6 +5708,10 @@ Partial Class packageoil
         Me.GroupBox33.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox44.ResumeLayout(False)
+        Me.GroupBox44.PerformLayout()
+        Me.GroupBox43.ResumeLayout(False)
+        Me.GroupBox43.PerformLayout()
         Me.GroupBox34.ResumeLayout(False)
         Me.GroupBox34.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -6116,4 +6263,16 @@ Partial Class packageoil
     Friend WithEvents eye_result As System.Windows.Forms.TextBox
     Friend WithEvents blood_pressure_result As System.Windows.Forms.TextBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents GroupBox43 As GroupBox
+    Friend WithEvents est3 As RadioButton
+    Friend WithEvents est2 As RadioButton
+    Friend WithEvents est1 As RadioButton
+    Friend WithEvents Label203 As Label
+    Friend WithEvents GroupBox44 As GroupBox
+    Friend WithEvents ust3 As RadioButton
+    Friend WithEvents ust2 As RadioButton
+    Friend WithEvents ust1 As RadioButton
+    Friend WithEvents Label204 As Label
+    Friend WithEvents Label205 As Label
+    Friend WithEvents txtCertExp As TextBox
 End Class

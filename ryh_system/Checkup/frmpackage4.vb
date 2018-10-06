@@ -2958,7 +2958,7 @@ Public Class frmpackage4
             End With
 
             With .Range("A2:B2")
-                With excelsheets.Shapes.AddShape(Microsoft.Office.Core.MsoAutoShapeType.msoShapeRoundedRectangle, _
+                With excelsheets.Shapes.AddShape(MsoAutoShapeType.msoShapeRoundedRectangle, _
                     30, 30, 320, 80)
                     .TextEffect.Alignment = MsoTextEffectAlignment.msoTextEffectAlignmentLeft
                     .Fill.ForeColor.RGB = RGB(255, 255, 255)

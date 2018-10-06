@@ -17,7 +17,7 @@ Public Class prnOilPackage
     Dim id_hn As String
     Dim mysql As MySqlConnection
     Dim rpt1 As New reportOilCompany
-    Dim rpt2 As New reportOilCompany1
+    Dim rpt2 As New reportOilCompany_2
     Dim newReport_oil As Boolean
     Dim cryRpt As New ReportDocument
 
@@ -1585,6 +1585,8 @@ Public Class prnOilPackage
         End If
 
 
+
+
     End Sub
 
 
@@ -1910,6 +1912,32 @@ Public Class prnOilPackage
                 rpt1.SetParameterValue("ekg_ab", "<p align='center' ><font>-</font></p>")
             End If
 
+
+            If frmOilPackage.est = "Normal" Then
+                rpt1.SetParameterValue("est_a", "<p align='center' ><font>&#10003;</font></p>")
+                rpt1.SetParameterValue("est_ab", "")
+            ElseIf frmOilPackage.est = "Abnormal" Then
+                rpt1.SetParameterValue("est_a ", "")
+                rpt1.SetParameterValue("est_ab", "<p align='center' ><font>&#10003;</font></p>")
+            ElseIf frmOilPackage.est = "NoData" Then
+                rpt1.SetParameterValue("est_a", "<p align='center' ><font>-</font></p>")
+                rpt1.SetParameterValue("est_ab", "<p align='center' ><font>-</font></p>")
+            End If
+
+            If frmOilPackage.ust = "Normal" Then
+                rpt1.SetParameterValue("ust_a", "<p align='center' ><font>&#10003;</font></p>")
+                rpt1.SetParameterValue("ust_ab", "")
+            ElseIf frmOilPackage.ust = "Abnormal" Then
+                rpt1.SetParameterValue("ust_a ", "")
+                rpt1.SetParameterValue("ust_ab", "<p align='center' ><font>&#10003;</font></p>")
+            ElseIf frmOilPackage.ust = "NoData" Then
+                rpt1.SetParameterValue("ust_a", "<p align='center' ><font>-</font></p>")
+                rpt1.SetParameterValue("ust_ab", "<p align='center' ><font>-</font></p>")
+            End If
+
+
+
+
         Else
 
 
@@ -1929,11 +1957,13 @@ Public Class prnOilPackage
 
 
 
+            rpt2.SetParameterValue("symbol_text", "<p align='center' ><font>&#10003; = 'ปกติ (Normal)'</font> <br> <font>&#10005; = 'ผิดปกติ (Abnormal)'</font> </p>")
+
             If frmOilPackage.r_eye = "Normal" Then
                 rpt2.SetParameterValue("eye_n", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.r_eye = "Abnormal" Then
 
-                rpt2.SetParameterValue("eye_n", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("eye_n", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.r_eye = "NoData" Then
                 rpt2.SetParameterValue("eye_n", "<p align='center' ><font>-</font></p>")
 
@@ -1947,7 +1977,7 @@ Public Class prnOilPackage
             If frmOilPackage.neck = "Normal" Then
                 rpt2.SetParameterValue("neck_n", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.neck = "Abnormal" Then
-                rpt2.SetParameterValue("neck_n", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("neck_n", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.neck = "NoData" Then
                 rpt2.SetParameterValue("neck_n", "<p align='center' ><font>-</font></p>")
             End If
@@ -1956,7 +1986,7 @@ Public Class prnOilPackage
             If frmOilPackage.heart = "Normal" Then
                 rpt2.SetParameterValue("heart_a", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.heart = "Abnormal" Then
-                rpt2.SetParameterValue("heart_a", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("heart_a", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.heart = "NoData" Then
                 rpt2.SetParameterValue("heart_a", "<p align='center' ><font>-</font></p>")
             End If
@@ -1965,7 +1995,7 @@ Public Class prnOilPackage
             If frmOilPackage.vas = "Normal" Then
                 rpt2.SetParameterValue("vac_a", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.vas = "Abnormal" Then
-                rpt2.SetParameterValue("vac_a", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("vac_a", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.vas = "NoData" Then
                 rpt2.SetParameterValue("vac_a", "<p align='center' ><font>-</font></p>")
             End If
@@ -1974,7 +2004,7 @@ Public Class prnOilPackage
             If frmOilPackage.chest = "Normal" Then
                 rpt2.SetParameterValue("lungs_a", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.chest = "Abnormal" Then
-                rpt2.SetParameterValue("lungs_a", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("lungs_a", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.chest = "NoData" Then
                 rpt2.SetParameterValue("lungs_a", "<p align='center' ><font>-</font></p>")
             End If
@@ -1982,7 +2012,7 @@ Public Class prnOilPackage
             If frmOilPackage.ab = "Normal" Then
                 rpt2.SetParameterValue("ab_a", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.ab = "Abnormal" Then
-                rpt2.SetParameterValue("ab_a", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("ab_a", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.ab = "NoData" Then
                 rpt2.SetParameterValue("ab_a", "<p align='center' ><font>-</font></p>")
             End If
@@ -1990,7 +2020,7 @@ Public Class prnOilPackage
             If frmOilPackage.lymp = "Normal" Then
                 rpt2.SetParameterValue("lym_a", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.lymp = "Abnormal" Then
-                rpt2.SetParameterValue("lym_a", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("lym_a", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.lymp = "NoData" Then
                 rpt2.SetParameterValue("lym_a", "<p align='center' ><font>-</font></p>")
             End If
@@ -1998,7 +2028,7 @@ Public Class prnOilPackage
             If frmOilPackage.gu = "Normal" Then
                 rpt2.SetParameterValue("gu_a", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.gu = "Abnormal" Then
-                rpt2.SetParameterValue("gu_a", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("gu_a", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.gu = "NoData" Then
                 rpt2.SetParameterValue("gu_a", "<p align='center' ><font>-</font></p>")
             End If
@@ -2007,7 +2037,7 @@ Public Class prnOilPackage
             If frmOilPackage.ex = "Normal" Then
                 rpt2.SetParameterValue("ex_a", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.ex = "Abnormal" Then
-                rpt2.SetParameterValue("ex_a", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("ex_a", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.ex = "NoData" Then
                 rpt2.SetParameterValue("ex_a", "<p align='center' ><font>-</font></p>")
             End If
@@ -2015,7 +2045,7 @@ Public Class prnOilPackage
             If frmOilPackage.spine = "Normal" Then
                 rpt2.SetParameterValue("spine_a", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.spine = "Abnormal" Then
-                rpt2.SetParameterValue("spine_a", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("spine_a", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.spine = "NoData" Then
                 rpt2.SetParameterValue("spine_a", "<p align='center' ><font>-</font></p>")
             End If
@@ -2025,7 +2055,7 @@ Public Class prnOilPackage
             If frmOilPackage.skins = "Normal" Then
                 rpt2.SetParameterValue("skin_a", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.skins = "Abnormal" Then
-                rpt2.SetParameterValue("skin_a", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("skin_a", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.skins = "NoData" Then
                 rpt2.SetParameterValue("skin_a", "<p align='center' ><font>-</font></p>")
             End If
@@ -2035,7 +2065,7 @@ Public Class prnOilPackage
             If frmOilPackage.audio = "Normal" Then
                 rpt2.SetParameterValue("audio_a", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.audio = "Abnormal" Then
-                rpt2.SetParameterValue("audio_a", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("audio_a", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.audio = "NoData" Then
                 rpt2.SetParameterValue("audio_a", "<p align='center' ><font>-</font></p>")
             End If
@@ -2045,7 +2075,7 @@ Public Class prnOilPackage
             If frmOilPackage.lung = "Normal" Then
                 rpt2.SetParameterValue("lung_a", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.lung = "Abnormal" Then
-                rpt2.SetParameterValue("lung_a", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("lung_a", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.lung = "NoData" Then
                 rpt2.SetParameterValue("lung_a", "<p align='center' ><font>-</font></p>")
             End If
@@ -2054,9 +2084,27 @@ Public Class prnOilPackage
             If frmOilPackage.ekg = "Normal" Then
                 rpt2.SetParameterValue("ekg_a", "<p align='center' ><font>&#10003;</font></p>")
             ElseIf frmOilPackage.ekg = "Abnormal" Then
-                rpt2.SetParameterValue("ekg_a ", "<p align='center' ><font>&#10069;</font></p>")
+                rpt2.SetParameterValue("ekg_a ", "<p align='center' ><font>&#10005;</font></p>")
             ElseIf frmOilPackage.ekg = "NoData" Then
                 rpt2.SetParameterValue("ekg_a", "<p align='center' ><font>-</font></p>")
+            End If
+
+
+            If frmOilPackage.est = "Normal" Then
+                rpt2.SetParameterValue("est_a", "<p align='center' ><font>&#10003;</font></p>")
+            ElseIf frmOilPackage.est = "Abnormal" Then
+                rpt2.SetParameterValue("est_a ", "<p align='center' ><font>&#10005;</font></p>")
+            ElseIf frmOilPackage.est = "NoData" Then
+                rpt2.SetParameterValue("est_a", "<p align='center' ><font>-</font></p>")
+            End If
+
+
+            If frmOilPackage.ust = "Normal" Then
+                rpt2.SetParameterValue("ust_a", "<p align='center' ><font>&#10003;</font></p>")
+            ElseIf frmOilPackage.ust = "Abnormal" Then
+                rpt2.SetParameterValue("ust_a ", "<p align='center' ><font>&#10005;</font></p>")
+            ElseIf frmOilPackage.ust = "NoData" Then
+                rpt2.SetParameterValue("ust_a", "<p align='center' ><font>-</font></p>")
             End If
 
 
