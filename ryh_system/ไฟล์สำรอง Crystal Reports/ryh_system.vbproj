@@ -14,13 +14,16 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <SccProjectName>Svn</SccProjectName>
-    <SccLocalPath>Svn</SccLocalPath>
-    <SccAuxPath>Svn</SccAuxPath>
-    <SccProvider>SubversionScc</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
     <PublishUrl>ftp://ryh1/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -36,9 +39,10 @@
     <MinimumRequiredVersion>1.0.0.184</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>193</ApplicationRevision>
+    <TrustUrlParameters>true</TrustUrlParameters>
+    <ApplicationRevision>460</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <UseApplicationTrust>false</UseApplicationTrust>
+    <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -86,105 +90,182 @@
     <ApplicationIcon>favicon %282%29.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>CA735413F69328685D56E2A1240708F77F128E15</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>4D82A758AFCF270A37282B229EA520E5CC1D10B8</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>ryh_system_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>ryh_system.xml</DocumentationFile>
+    <WarningLevel>0</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>ryh_system.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <WarningLevel>0</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AICompactMenu">
-      <HintPath>..\..\..\..\..\Desktop\DLL\AICompactMenu.dll</HintPath>
-    </Reference>
-    <Reference Include="AIDropPanel">
-      <HintPath>..\..\..\..\..\Desktop\DLL\AIDropPanel.dll</HintPath>
-    </Reference>
-    <Reference Include="AITabPanel">
-      <HintPath>..\..\..\..\..\Desktop\DLL\AITabPanel.dll</HintPath>
-    </Reference>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar.Design, Version=11.5.1.1, Culture=neutral, PublicKeyToken=90f470f34c89ccaf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.DotNetBar.Design.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Keyboard, Version=11.5.1.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Layout, Version=11.5.1.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.DotNetBar.Layout.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Layout.Design, Version=11.5.1.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Schedule, Version=11.5.1.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.DotNetBar.Schedule.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=11.5.1.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=11.5.1.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevComponents.Instrumentation, Version=11.5.1.1, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.Instrumentation.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevComponents.Instrumentation.Design, Version=11.5.1.1, Culture=neutral, PublicKeyToken=76cb4c6eb576bca5, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.Instrumentation.Design.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevComponents.SuperGrid.Design, Version=11.5.1.1, Culture=neutral, PublicKeyToken=26d81176cfa2b486, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.SuperGrid.Design.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevComponents.TreeGX, Version=11.5.1.1, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\DotNetBar for Windows Forms\DevComponents.TreeGX.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dotnetrix.TabControl">
+      <HintPath>D:\Desktop\Dotnetrix.TabControl.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>D:\Desktop\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="mysql.data">
-      <HintPath>..\..\..\..\..\Desktop\HelpDesk\HelpDesk\bin\Debug\mysql.data.dll</HintPath>
+    <Reference Include="Microsoft.Office.Tools.Excel.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="office, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\MYFRI\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Data">
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Deployment">
       <Private>True</Private>
     </Reference>
@@ -194,8 +275,13 @@
     <Reference Include="System.Net.FtpClient">
       <HintPath>..\System.Net.FtpClient.14.06.04\bin\Debug\System.Net.FtpClient.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Services">
       <Private>True</Private>
     </Reference>
@@ -218,8 +304,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="TabControlEX">
-      <HintPath>..\..\..\..\..\Desktop\DLL\TabControlEX.dll</HintPath>
+      <HintPath>E:\TabControlEX.dll</HintPath>
     </Reference>
+    <Reference Include="UIAutomationClient" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -240,6 +327,26 @@
       <DependentUpon>bill_check.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Billthungsong\bill_checkryh.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bill_checkryh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\BOJ5.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOJ5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\Class1.vb" />
+    <Compile Include="Billthungsong\condb.vb" />
+    <Compile Include="Billthungsong\CrystalReport10.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport10.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Billthungsong\CrystalReport3.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -252,6 +359,37 @@
       <DependentUpon>CrystalReport4.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Billthungsong\CrystalReport5.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\CrystalReport6.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport6.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\CrystalReport7.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport7.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\CrystalReport8.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport8.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\CrystalReport9.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport9.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\DATEJAJA.vb" />
     <Compile Include="Billthungsong\DBsummary.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -260,16 +398,64 @@
     <Compile Include="Billthungsong\DBsummary.vb">
       <DependentUpon>DBsummary.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Billthungsong\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Billthungsong\frmadd_user.Designer.vb">
       <DependentUpon>frmadd_user.vb</DependentUpon>
     </Compile>
     <Compile Include="Billthungsong\frmadd_user.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Billthungsong\frmeditdetail_bill.Designer.vb">
+      <DependentUpon>frmeditdetail_bill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmeditdetail_bill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\frmedit_detailbillryh.Designer.vb">
+      <DependentUpon>frmedit_detailbillryh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmedit_detailbillryh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\frmedit_user.Designer.vb">
+      <DependentUpon>frmedit_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmedit_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\frmregister.Designer.vb">
+      <DependentUpon>frmregister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmregister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\frmreprint.Designer.vb">
+      <DependentUpon>frmreprint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmreprint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\frmrptbillreprint.Designer.vb">
+      <DependentUpon>frmrptbillreprint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmrptbillreprint.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Billthungsong\frmrpt_bill.Designer.vb">
       <DependentUpon>frmrpt_bill.vb</DependentUpon>
     </Compile>
     <Compile Include="Billthungsong\frmrpt_bill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_boj5.Designer.vb">
+      <DependentUpon>frmrpt_boj5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_boj5.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Billthungsong\frmrpt_byalone.Designer.vb">
@@ -284,10 +470,46 @@
     <Compile Include="Billthungsong\frmrpt_env.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Billthungsong\frmrpt_enva4.Designer.vb">
+      <DependentUpon>frmrpt_enva4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_enva4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_monthly.Designer.vb">
+      <DependentUpon>frmrpt_monthly.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_monthly.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_monthlyreport.Designer.vb">
+      <DependentUpon>frmrpt_monthlyreport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_monthlyreport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_result.Designer.vb">
+      <DependentUpon>frmrpt_result.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_result.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Billthungsong\frmrpt_round.Designer.vb">
       <DependentUpon>frmrpt_round.vb</DependentUpon>
     </Compile>
     <Compile Include="Billthungsong\frmrpt_round.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_ryh.Designer.vb">
+      <DependentUpon>frmrpt_ryh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_ryh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_ryh1.Designer.vb">
+      <DependentUpon>frmrpt_ryh1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_ryh1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Billthungsong\frmrpt_summary.Designer.vb">
@@ -302,6 +524,30 @@
     <Compile Include="Billthungsong\frmcheck_bill.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Billthungsong\frmrpt_summaryall.Designer.vb">
+      <DependentUpon>frmrpt_summaryall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmrpt_summaryall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\frmsetup_shareryh.Designer.vb">
+      <DependentUpon>frmsetup_shareryh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\frmsetup_shareryh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\REPORTREGISTEr.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTREGISTEr.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\rptreport_count.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptreport_count.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Billthungsong\rpt_alone.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -314,12 +560,112 @@
       <DependentUpon>rpt_envelopdl.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Billthungsong\rpt_round.vb">
+    <Compile Include="AC\rpt_round.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rpt_round.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Billthungsong\rpt_envelopryh.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_envelopryh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\rpt_envryh.Designer.vb">
+      <DependentUpon>rpt_envryh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\rpt_envryh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\rpt_monthly.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_monthly.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\rpt_sumryh.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_sumryh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Billthungsong\thungsong_share.Designer.vb">
+      <DependentUpon>thungsong_share.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billthungsong\thungsong_share.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkup\frmrpt_checkuprecheck.Designer.vb">
+      <DependentUpon>frmrpt_checkuprecheck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Checkup\frmrpt_checkuprecheck.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkup\IFontDisp.vb" />
+    <Compile Include="CLOTH\CLOTHCLASS.vb" />
+    <Compile Include="CLOTH\DEPT\CLOTHDEPTCLASS.vb" />
+    <Compile Include="CLOTH\DEPT\frmclothdept_adduse.Designer.vb">
+      <DependentUpon>frmclothdept_adduse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLOTH\DEPT\frmclothdept_adduse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOTH\DEPT\frmclothdept_main.Designer.vb">
+      <DependentUpon>frmclothdept_main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLOTH\DEPT\frmclothdept_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOTH\DEPT\frmclothdept_send.Designer.vb">
+      <DependentUpon>frmclothdept_send.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLOTH\DEPT\frmclothdept_send.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOTH\frmcloth_add.Designer.vb">
+      <DependentUpon>frmcloth_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLOTH\frmcloth_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOTH\frmcloth_addjust1.Designer.vb">
+      <DependentUpon>frmcloth_addjust1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLOTH\frmcloth_addjust1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOTH\frmcloth_addjustdetial.Designer.vb">
+      <DependentUpon>frmcloth_addjustdetial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLOTH\frmcloth_addjustdetial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOTH\frmcloth_adjust.Designer.vb">
+      <DependentUpon>frmcloth_adjust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLOTH\frmcloth_adjust.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOTH\frmcloth_manage.Designer.vb">
+      <DependentUpon>frmcloth_manage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLOTH\frmcloth_manage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOTH\frmmain_cloth.Designer.vb">
+      <DependentUpon>frmmain_cloth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CLOTH\frmmain_cloth.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONDB.vb" />
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dept\DATE.vb" />
     <Compile Include="Dept\dbdept.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -327,6 +673,18 @@
     </Compile>
     <Compile Include="Dept\dbdept.vb">
       <DependentUpon>dbdept.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dept\frmdept_quatool.Designer.vb">
+      <DependentUpon>frmdept_quatool.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dept\frmdept_quatool.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dept\frmdept_tool.Designer.vb">
+      <DependentUpon>frmdept_tool.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dept\frmdept_tool.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dept\frmrpt_risk.Designer.vb">
       <DependentUpon>frmrpt_risk.vb</DependentUpon>
@@ -344,6 +702,21 @@
       <DependentUpon>rpt_risk.vb</DependentUpon>
     </Compile>
     <Compile Include="Dept\rpt_risk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXCELCLASS.vb" />
+    <Compile Include="EXPORTEXCEL.vb" />
+    <Compile Include="FILTERCLASS.vb" />
+    <Compile Include="forecast\forecast.Designer.vb">
+      <DependentUpon>forecast.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forecast\forecast.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IT\ADD_DEPARTMENT.Designer.vb">
@@ -432,17 +805,6 @@
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="IT\CrystalReport2.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport2.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataSet1.vb">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
@@ -452,6 +814,12 @@
     </Compile>
     <Compile Include="AC\edit_diag.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT\CrystalReport2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="IT\EDIT_FLOOR.Designer.vb">
       <DependentUpon>EDIT_FLOOR.vb</DependentUpon>
@@ -657,6 +1025,12 @@
     <Compile Include="IT\frmit_dept.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IT\frmit_himexcel.Designer.vb">
+      <DependentUpon>frmit_himexcel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IT\frmit_himexcel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IT\frmit_mdept.Designer.vb">
       <DependentUpon>frmit_mdept.vb</DependentUpon>
     </Compile>
@@ -685,6 +1059,18 @@
       <DependentUpon>frmlogin_dept.vb</DependentUpon>
     </Compile>
     <Compile Include="Dept\frmlogin_dept.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT\frmit_opdtime.Designer.vb">
+      <DependentUpon>frmit_opdtime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IT\frmit_opdtime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Form3.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main\frmmain_bill.Designer.vb">
@@ -717,6 +1103,12 @@
     <Compile Include="Main\frmmain_nurse.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Main\frmmain_premium.Designer.vb">
+      <DependentUpon>frmmain_premium.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main\frmmain_premium.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main\frmmain_qua.Designer.vb">
       <DependentUpon>frmmain_qua.vb</DependentUpon>
     </Compile>
@@ -727,6 +1119,18 @@
       <DependentUpon>frmmain_ryh.vb</DependentUpon>
     </Compile>
     <Compile Include="Main\frmmain_ryh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main\SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\WaitForm1.Designer.vb">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main\WaitForm1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="nurse\frmnure_rpt.Designer.vb">
@@ -1083,10 +1487,10 @@
     <Compile Include="IT\Help_Editofficer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IT\Help_Show.Designer.vb">
+    <Compile Include="Main\Help_Show.Designer.vb">
       <DependentUpon>Help_Show.vb</DependentUpon>
     </Compile>
-    <Compile Include="IT\Help_Show.vb">
+    <Compile Include="Main\Help_Show.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AC\insurance_add.Designer.vb">
@@ -1230,10 +1634,22 @@
     <Compile Include="prnOilPackage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="reportcount.Designer.vb">
+      <DependentUpon>reportcount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportcount.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="reportOilCompany.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>reportOilCompany.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportOilCompany11.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportOilCompany1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="reportRisk.vb">
@@ -1246,6 +1662,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rpt-ambulance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptOildefault.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptOildefault.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="rpt_pramern.vb">
@@ -1272,6 +1694,7 @@
     <Compile Include="sendMesaage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SENDSMS.vb" />
     <Compile Include="SHOW_HISTORY_DEVICE.Designer.vb">
       <DependentUpon>SHOW_HISTORY_DEVICE.vb</DependentUpon>
     </Compile>
@@ -1332,6 +1755,18 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>bill_check.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\bill_checkryh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>bill_checkryh.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\BOJ5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BOJ5.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\CrystalReport10.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport10.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Billthungsong\CrystalReport3.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport3.vb</LastGenOutput>
@@ -1340,11 +1775,55 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport4.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\CrystalReport5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport5.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\CrystalReport6.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport6.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\CrystalReport7.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport7.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\CrystalReport8.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport8.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\CrystalReport9.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport9.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Billthungsong\frmadd_user.resx">
       <DependentUpon>frmadd_user.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmeditdetail_bill.resx">
+      <DependentUpon>frmeditdetail_bill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmedit_detailbillryh.resx">
+      <DependentUpon>frmedit_detailbillryh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmedit_user.resx">
+      <DependentUpon>frmedit_user.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmregister.resx">
+      <DependentUpon>frmregister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmreprint.resx">
+      <DependentUpon>frmreprint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmrptbillreprint.resx">
+      <DependentUpon>frmrptbillreprint.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Billthungsong\frmrpt_bill.resx">
       <DependentUpon>frmrpt_bill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmrpt_boj5.resx">
+      <DependentUpon>frmrpt_boj5.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Billthungsong\frmrpt_byalone.resx">
       <DependentUpon>frmrpt_byalone.vb</DependentUpon>
@@ -1352,14 +1831,46 @@
     <EmbeddedResource Include="Billthungsong\frmrpt_env.resx">
       <DependentUpon>frmrpt_env.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmrpt_enva4.resx">
+      <DependentUpon>frmrpt_enva4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmrpt_monthly.resx">
+      <DependentUpon>frmrpt_monthly.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmrpt_monthlyreport.resx">
+      <DependentUpon>frmrpt_monthlyreport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmrpt_result.resx">
+      <DependentUpon>frmrpt_result.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Billthungsong\frmrpt_round.resx">
       <DependentUpon>frmrpt_round.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmrpt_ryh.resx">
+      <DependentUpon>frmrpt_ryh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmrpt_ryh1.resx">
+      <DependentUpon>frmrpt_ryh1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Billthungsong\frmrpt_summary.resx">
       <DependentUpon>frmrpt_summary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Billthungsong\frmcheck_bill.resx">
       <DependentUpon>frmcheck_bill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmrpt_summaryall.resx">
+      <DependentUpon>frmrpt_summaryall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\frmsetup_shareryh.resx">
+      <DependentUpon>frmsetup_shareryh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\REPORTREGISTEr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTREGISTEr.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\rptreport_count.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptreport_count.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Billthungsong\rpt_alone.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1369,9 +1880,63 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_envelopdl.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Billthungsong\rpt_round.rpt">
+    <EmbeddedResource Include="AC\rpt_round.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_round.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\rpt_envelopryh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_envelopryh.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\rpt_envryh.resx">
+      <DependentUpon>rpt_envryh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\rpt_monthly.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_monthly.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\rpt_sumryh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_sumryh.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billthungsong\thungsong_share.resx">
+      <DependentUpon>thungsong_share.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkup\frmrpt_checkuprecheck.resx">
+      <DependentUpon>frmrpt_checkuprecheck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLOTH\DEPT\frmclothdept_adduse.resx">
+      <DependentUpon>frmclothdept_adduse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLOTH\DEPT\frmclothdept_main.resx">
+      <DependentUpon>frmclothdept_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLOTH\DEPT\frmclothdept_send.resx">
+      <DependentUpon>frmclothdept_send.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLOTH\frmcloth_add.resx">
+      <DependentUpon>frmcloth_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLOTH\frmcloth_addjust1.resx">
+      <DependentUpon>frmcloth_addjust1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLOTH\frmcloth_addjustdetial.resx">
+      <DependentUpon>frmcloth_addjustdetial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLOTH\frmcloth_adjust.resx">
+      <DependentUpon>frmcloth_adjust.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLOTH\frmcloth_manage.resx">
+      <DependentUpon>frmcloth_manage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLOTH\frmmain_cloth.resx">
+      <DependentUpon>frmmain_cloth.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dept\frmdept_quatool.resx">
+      <DependentUpon>frmdept_quatool.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dept\frmdept_tool.resx">
+      <DependentUpon>frmdept_tool.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dept\frmrpt_risk.resx">
       <DependentUpon>frmrpt_risk.vb</DependentUpon>
@@ -1382,6 +1947,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dept\rpt_risk.resx">
       <DependentUpon>rpt_risk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forecast\forecast.resx">
+      <DependentUpon>forecast.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IT\ADD_DEPARTMENT.resx">
       <DependentUpon>ADD_DEPARTMENT.vb</DependentUpon>
@@ -1426,12 +1997,12 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="AC\edit_diag.resx">
+      <DependentUpon>edit_diag.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IT\CrystalReport2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport2.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AC\edit_diag.resx">
-      <DependentUpon>edit_diag.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IT\EDIT_FLOOR.resx">
       <DependentUpon>EDIT_FLOOR.vb</DependentUpon>
@@ -1535,6 +2106,9 @@
     <EmbeddedResource Include="IT\frmit_dept.resx">
       <DependentUpon>frmit_dept.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IT\frmit_himexcel.resx">
+      <DependentUpon>frmit_himexcel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IT\frmit_mdept.resx">
       <DependentUpon>frmit_mdept.vb</DependentUpon>
     </EmbeddedResource>
@@ -1549,6 +2123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dept\frmlogin_dept.resx">
       <DependentUpon>frmlogin_dept.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT\frmit_opdtime.resx">
+      <DependentUpon>frmit_opdtime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmmain_bill.resx">
       <DependentUpon>frmmain_bill.vb</DependentUpon>
@@ -1565,12 +2145,22 @@
     <EmbeddedResource Include="Main\frmmain_nurse.resx">
       <DependentUpon>frmmain_nurse.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmmain_premium.resx">
+      <DependentUpon>frmmain_premium.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\frmmain_qua.resx">
       <DependentUpon>frmmain_qua.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmmain_ryh.resx">
       <DependentUpon>frmmain_ryh.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\WaitForm1.resx">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="nurse\frmnure_rpt.resx">
       <DependentUpon>frmnure_rpt.vb</DependentUpon>
     </EmbeddedResource>
@@ -1733,7 +2323,7 @@
     <EmbeddedResource Include="IT\Help_Editofficer.resx">
       <DependentUpon>Help_Editofficer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IT\Help_Show.resx">
+    <EmbeddedResource Include="Main\Help_Show.resx">
       <DependentUpon>Help_Show.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AC\insurance_search.resx">
@@ -1800,9 +2390,16 @@
     <EmbeddedResource Include="prnOilPackage.resx">
       <DependentUpon>prnOilPackage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportcount.resx">
+      <DependentUpon>reportcount.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportOilCompany.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reportOilCompany.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportOilCompany1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportOilCompany11.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reportRisk.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1811,6 +2408,10 @@
     <EmbeddedResource Include="rpt-ambulance.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt-ambulance.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptOildefault.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptOildefault.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rpt_pramern.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1887,6 +2488,7 @@
     <None Include="Dept\dbdept.xss">
       <DependentUpon>dbdept.xsd</DependentUpon>
     </None>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -1896,8 +2498,8 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="packages.config" />
     <None Include="Resources\Thumbs.db" />
-    <None Include="ryh_system_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ppt-background-powerpoint-ppt-backgrounds-abstract-backgrounds.jpg" />
@@ -2083,16 +2685,6 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -2103,13 +2695,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
       <Visible>False</Visible>
       <Group>
@@ -2230,6 +2827,36 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
     <PublishFile Include="DevComponents.DotNetBar.Design">
       <Visible>False</Visible>
       <Group>
@@ -2340,6 +2967,76 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+    <PublishFile Include="DevExpress.Office.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Sparkline.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraPrinting.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.RichEdit.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
     <PublishFile Include="FlashControlV71">
       <Visible>False</Visible>
       <Group>
@@ -2360,6 +3057,126 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="MySql.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Office.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Printing.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.RichEdit.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Sparkline.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Utils.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraBars.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraTreeList.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
     <PublishFile Include="ShockwaveFlashObjects">
       <Visible>False</Visible>
       <Group>
@@ -2376,31 +3193,25 @@
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
+      <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="AxCrystalActiveXReportViewerLib105">
-      <Guid>{A30B2DDF-C00F-469F-A23C-D6177608A128}</Guid>
-      <VersionMajor>10</VersionMajor>
-      <VersionMinor>5</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="CrystalActiveXReportViewerLib105">
-      <Guid>{A30B2DDF-C00F-469F-A23C-D6177608A128}</Guid>
-      <VersionMajor>10</VersionMajor>
-      <VersionMinor>5</VersionMinor>
+    <COMReference Include="CrystalActiveXReportViewerLib13">
+      <Guid>{B816E96D-D151-4000-BADB-53A2D8F3FC65}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
