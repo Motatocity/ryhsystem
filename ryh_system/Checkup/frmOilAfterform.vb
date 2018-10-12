@@ -94,7 +94,8 @@ Public Class frmOilAfterform
                     rpt1.SetParameterValue("blood_pressure", mySqlReader("p_blood_pre"))
                     rpt1.SetParameterValue("eye_right", mySqlReader("p_eyeright"))
                     rpt1.SetParameterValue("eye_left", mySqlReader("p_eyeleft"))
-                    rpt1.SetParameterValue("dteexpire", mySqlReader("ex_date"))
+
+                    rpt1.SetParameterValue("dteexpire", If(IsDBNull(mySqlReader("ex_date")), "-", mySqlReader("ex_date")))
 
                     ''dteexpire
                     ''  rpt1.SetParameterValue("blood_pressure_result", mySqlReader("blood_pressure_result"))
