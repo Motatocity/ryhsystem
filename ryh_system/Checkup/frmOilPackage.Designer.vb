@@ -472,6 +472,8 @@ Partial Class frmOilPackage
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.TabPageEX7 = New Dotnetrix.Controls.TabPageEX()
+        Me.Label205 = New System.Windows.Forms.Label()
+        Me.txtCertExp = New System.Windows.Forms.TextBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.txt_other_fit = New System.Windows.Forms.RichTextBox()
@@ -504,8 +506,8 @@ Partial Class frmOilPackage
         Me.dateconfirm = New DevComponents.DotNetBar.Controls.MaskedTextBoxAdv()
         Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.txtCertExp = New System.Windows.Forms.TextBox()
-        Me.Label205 = New System.Windows.Forms.Label()
+        Me.txt_hav_total = New System.Windows.Forms.TextBox()
+        Me.Label206 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.TabControlEX1.SuspendLayout()
         Me.TabPageEX1.SuspendLayout()
@@ -771,7 +773,7 @@ Partial Class frmOilPackage
         Me.TabControlEX1.Location = New System.Drawing.Point(12, 116)
         Me.TabControlEX1.Name = "TabControlEX1"
         Me.TabControlEX1.Padding = New System.Drawing.Point(3, 3)
-        Me.TabControlEX1.SelectedIndex = 7
+        Me.TabControlEX1.SelectedIndex = 5
         Me.TabControlEX1.SelectedTabColor = System.Drawing.Color.Gray
         Me.TabControlEX1.Size = New System.Drawing.Size(1154, 554)
         Me.TabControlEX1.TabIndex = 316
@@ -4809,6 +4811,8 @@ Partial Class frmOilPackage
         'GroupBox40
         '
         Me.GroupBox40.BackColor = System.Drawing.Color.Gainsboro
+        Me.GroupBox40.Controls.Add(Me.txt_hav_total)
+        Me.GroupBox40.Controls.Add(Me.Label206)
         Me.GroupBox40.Controls.Add(Me.tab6_result_virus_b)
         Me.GroupBox40.Controls.Add(Me.txt_hav_igm)
         Me.GroupBox40.Controls.Add(Me.Label185)
@@ -5396,6 +5400,23 @@ Partial Class frmOilPackage
         Me.TabPageEX7.TabIndex = 7
         Me.TabPageEX7.Text = "Medical Certificate"
         '
+        'Label205
+        '
+        Me.Label205.AutoSize = True
+        Me.Label205.Font = New System.Drawing.Font("Cordia New", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label205.Location = New System.Drawing.Point(830, 233)
+        Me.Label205.Name = "Label205"
+        Me.Label205.Size = New System.Drawing.Size(116, 34)
+        Me.Label205.TabIndex = 409
+        Me.Label205.Text = "Cert. Exp Date"
+        '
+        'txtCertExp
+        '
+        Me.txtCertExp.Location = New System.Drawing.Point(946, 233)
+        Me.txtCertExp.Name = "txtCertExp"
+        Me.txtCertExp.Size = New System.Drawing.Size(171, 34)
+        Me.txtCertExp.TabIndex = 408
+        '
         'RichTextBox1
         '
         Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Window
@@ -5705,22 +5726,24 @@ Partial Class frmOilPackage
         Me.Button2.TabIndex = 328
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'txtCertExp
+        'txt_hav_total
         '
-        Me.txtCertExp.Location = New System.Drawing.Point(946, 233)
-        Me.txtCertExp.Name = "txtCertExp"
-        Me.txtCertExp.Size = New System.Drawing.Size(171, 34)
-        Me.txtCertExp.TabIndex = 408
+        Me.txt_hav_total.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txt_hav_total.Location = New System.Drawing.Point(365, 83)
+        Me.txt_hav_total.Name = "txt_hav_total"
+        Me.txt_hav_total.Size = New System.Drawing.Size(140, 22)
+        Me.txt_hav_total.TabIndex = 353
         '
-        'Label205
+        'Label206
         '
-        Me.Label205.AutoSize = True
-        Me.Label205.Font = New System.Drawing.Font("Cordia New", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label205.Location = New System.Drawing.Point(830, 233)
-        Me.Label205.Name = "Label205"
-        Me.Label205.Size = New System.Drawing.Size(116, 34)
-        Me.Label205.TabIndex = 409
-        Me.Label205.Text = "Cert. Exp Date"
+        Me.Label206.AutoSize = True
+        Me.Label206.Font = New System.Drawing.Font("AngsanaUPC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label206.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label206.Location = New System.Drawing.Point(271, 79)
+        Me.Label206.Name = "Label206"
+        Me.Label206.Size = New System.Drawing.Size(96, 26)
+        Me.Label206.TabIndex = 352
+        Me.Label206.Text = "Anti HAV Total"
         '
         'frmOilPackage
         '
@@ -6355,4 +6378,6 @@ Partial Class frmOilPackage
     Friend WithEvents Label204 As Label
     Friend WithEvents Label205 As Label
     Friend WithEvents txtCertExp As TextBox
+    Friend WithEvents txt_hav_total As TextBox
+    Friend WithEvents Label206 As Label
 End Class

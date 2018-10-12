@@ -66,6 +66,7 @@ Public Class prnOilPackage
             rpt1.SetParameterValue("name", frmOilPackage.name_eng)
             rpt1.SetParameterValue("lastname", frmOilPackage.lastname_eng)
 
+            rpt1.SetParameterValue("vir_total", frmOilPackage.vir_total)
 
 
             rpt1.SetParameterValue("other_fit", frmOilPackage.other_fit)
@@ -157,6 +158,7 @@ Public Class prnOilPackage
             rpt2.SetParameterValue("name", frmOilPackage.name_eng)
             rpt2.SetParameterValue("lastname", frmOilPackage.lastname_eng)
 
+            rpt2.SetParameterValue("vir_total", frmOilPackage.vir_total)
 
 
             rpt2.SetParameterValue("other_fit", frmOilPackage.other_fit)
